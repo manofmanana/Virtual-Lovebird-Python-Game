@@ -762,7 +762,12 @@ class MangoTamagotchi:
                             # play flap sound if available
                             try:
                                 if 'flap' in self.sounds:
-                                    self.sounds['flap'].play()
+                                    # Play only the first 1000ms of the flap sound to avoid long tails
+                                    try:
+                                        self.sounds['flap'].play(maxtime=1000)
+                                    except TypeError:
+                                        # Older pygame may not support maxtime; fallback to play()
+                                        self.sounds['flap'].play()
                             except Exception:
                                 pass
                             # toggle which flying sprite to use for smooth animation
