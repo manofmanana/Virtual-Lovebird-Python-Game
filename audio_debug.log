@@ -1060,3 +1060,1193 @@
 [audio] _play_sfx: attempt to play key='button'
 [audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11c14dfd0> (set_vol=0.810 read_vol=1.0)
 [audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1131c56d0> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x1131c5e10> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1131c5b30> (set_vol=0.900 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] _play_sfx: attempt to play key='flap'
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1054e2b10> (set_vol=1.000 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=1.000)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119b717b0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119b712d0> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x119b71b90> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119b71c50> (set_vol=0.900 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11f52e530> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11f52e670> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x119b45b50> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x119b453d0> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x119c45ab0> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x119c45750> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1087a4330> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1087a4190> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x124356a70> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124356530> (set_vol=0.900 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1178dde70> (set_vol=0.900 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119b87c90> (set_vol=0.900 read_vol=0.8046875)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x114480530> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119993c70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1027b4930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1027b4930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1027b4930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119993d30> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x103fbf090> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x103fbf2f0> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x106af8930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b8cfdf0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b8cff10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b8cfdb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b8cff10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x106af8930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11b8cff10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b8cfef0> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11c417d70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11c417c90> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703db0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703fb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703f10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703e10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x119703f10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703fb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703e10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703e30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x119703cf0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703d10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703c90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703cf0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703ed0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x119703df0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119703c90> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x119e96f30> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119e96f30> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x119e967b0> (set_vol=0.900 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11d653e70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11d653e50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11d653c70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11d653e10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11d653c70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11d653e50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11d653e70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11d653e50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11d653cf0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11d653e70> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1044a8930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11926fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11926fcd0> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x106fd5930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11ceabf10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11ceabc90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11ceabe30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11ceabe90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x106fd5930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x106fd5930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11ceabd50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x106fd5930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x106fd5930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11ceabe30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11ceabe90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11ceabd90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11ceabe90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x106fd5930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11ceabd90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11ceabd70> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12db8bdd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x104584930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x12db8bd90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12db8bd90> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x127783df0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x127783d30> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x12a96fc70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96fcf0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96fcd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x107270930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x107270930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96ff90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96fe30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96fbb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96ff90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96fd90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96ff10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96fcd0> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x12cd62350> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96fc70> (set_vol=0.900 read_vol=0.8046875)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x12a96fcd0> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96fcd0> (set_vol=0.900 read_vol=0.8046875)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96ff90> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96fd90> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12a96fd30> (set_vol=0.900 read_vol=0.8046875)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11956be50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x104790930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x104790930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x104790930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11956bc90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11956be70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x104790930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x104790930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x104790930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x104790930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x104790930> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11974be30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11974bc70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x10493c930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11974bf30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11974bbb0> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1174f3eb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1174f3ed0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x102730930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1174f3c90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x102730930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x102730930> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1065b5930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124c53c70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124c53e10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124c53f50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124c53c70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1065b5930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1065b5930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1065b5930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1065b5930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124c53f50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124c53d30> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1352f7c90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1352f7f30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1352f7c70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1045b8930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1045b8930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1352f7e50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1352f7d10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1352f7d10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1352f7d30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1045b8930> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x129cd7df0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x129cd7c70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x129cd7c70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x129cd7dd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x129cd7cd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x129cd7dd0> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x102d80930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x128573bb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x128573bb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x128573dd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x128573dd0> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x129df9b90> (set_vol=0.900 read_vol=0.8046875)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.600)
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x129df9230> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x128573c70> (set_vol=0.900 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11be45770> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11be45f30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b6afdd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11b6afd30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b6afd30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11be453d0> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11be45850> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11be45ef0> (set_vol=0.900 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11be45e90> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11be45e90> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1068e8930> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1068e8930> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b6afdd0> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11be45cd0> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b6afd30> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b6afbb0> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b6afc90> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1068e8930> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11be45450> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11be45fb0> (set_vol=0.900 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a0830> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a0d50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1242e7d30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1242e7a30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1242e7a30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a0a70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1242e7a30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1242e7db0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1242e7d30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x104955930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x104955930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1242e7c90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1242e7c90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1242e7d30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1242e7d30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a0670> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x1242e7d70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1242e7d70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a0590> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a0c50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a0c50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a0590> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a0af0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a06b0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a0d50> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x1242a08d0> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1242a05b0> (set_vol=0.900 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1242a08d0> (set_vol=0.900 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11af24ed0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11af24630> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x10ffe5db0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x10ffe5650> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x10e8ce9d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x10e847cb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x10e8ce6b0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x10e8ce6b0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x10e8ce970> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x102450930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x102450930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x102450930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x102450930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x102450930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x102450930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x102450930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x102450930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x10e8ce3d0> (set_vol=0.810 read_vol=1.0)
+[audio] suppressed 'button' sfx due to suppression flag
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x10e8ceb10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x10e8ce830> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x10e8ce830> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x117b33d30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x117b33670> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x117b33670> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11e484790> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11d5ffe30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11d5ffe10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11d5ffe10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x10710c930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11d5ffd50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11d5ffd50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11e4846b0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11e484790> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11e484a70> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede93b0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11cdf7cd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9e30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede94d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede95d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11cdf7cd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9d70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11cdf7cd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9d70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede99f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9d70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9db0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9e30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9e90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9ed0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede94d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9ad0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9ad0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9e90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9b50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9b50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede95d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9d70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9db0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9e90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9db0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9f10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9a10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9f10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9e90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9b50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9270> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9e90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9f10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede99f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede95d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9a10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede95d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9e90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede99f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede94f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede99f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9270> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede94f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede94f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede99f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9f10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede94f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede99f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede94f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede99f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9ed0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9a10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9fd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede94d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9ad0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9ad0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9ad0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede94d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ede9fd0> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x124ebfaf0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x124ebfab0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x124ebf7f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x124ebfc30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x124ebfb90> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x124ebfdb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124ebfcf0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124ebfcb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124ebfc90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124ebfcb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124ebfc90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124ebf9d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124ebfc70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124ebfe30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124ebfe50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x124ebfe50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x124ebfb90> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x124ebfb30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x124ebfd10> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x121a21270> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x121a21d50> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190caa10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190ca850> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cab70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190ca850> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cab70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190ca810> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cab50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cab50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cab10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cab90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190ca810> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cab50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190ca810> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190ca890> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cab90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cab90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cabb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190caaf0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cabb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190cab90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x1190cab90> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190ca890> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1190caab0> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1255389d0> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538b30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538bd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538c30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538b90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538c30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538bb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538b70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538b90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538b70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538b50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538bb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538b30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538b50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538a10> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1255385d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x125538b70> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a0f0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a2d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a250> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a110> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87af10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ac0fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ac0fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ac0fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ac0fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ac0fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87adb0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a4d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ac0fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a450> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ac0fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87af10> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ac0fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ac0fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87af30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a4d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a4d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a4d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a4d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ac0fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a450> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11ac0fd70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11c87af10> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a4d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a570> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87af30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87abd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87abd0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x11c87a8b0> (set_vol=0.810 read_vol=1.0)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1231beed0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x102d84930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x122537c90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x122537c90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x122537c70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x122537c90> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x122537e30> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x122537df0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1231bef50> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x102d84930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x122537c70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x102d84930> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x102d84930> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1231be390> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x122537e70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1231be870> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1231be870> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1231be870> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1231be830> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x1231beef0> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1231bec70> (set_vol=0.900 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1231be450> (set_vol=0.900 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='chirp'
+[audio] _play_sfx: played 'chirp' on channel <pygame.mixer.Channel object at 0x1231bea30> (set_vol=0.900 read_vol=1.0)

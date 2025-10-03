@@ -41,180 +41,68 @@ Take care of Mango, your virtual lovebird companion. Feed, bathe, play, and nurt
 - Real-world integration: Weather API affects Mango's mood
 - Educational content: Bird facts API provides learning opportunities
 - Day/night cycle: Background changes based on system time
-- Random events: Mango can get sick or misbehave
-- Medicine system: Heal Mango when sick
-- Discipline system: Manage misbehavior
-- Multiple moods: Different sprites based on Mango's condition
-- Custom sprites: Load your own Mango images
-- Game over/restart: Start fresh when health reaches zero
+# Mango: The Virtual Lovebird v2.0
 
-## Getting Started
+This repository is a lovingly-crafted virtual pet game built around Mango, my pet lovebird. It started as a small CS50P final project and grew into a larger hobby project that combines gameplay, UI polish, and a handful of mini-games.
 
-### Prerequisites
-- Python 3.7 or higher
-- pip package manager
+This project is dedicated to Mango (2019–2024). He was my friend and companion — this code is a small, imperfect tribute to him.
 
-### Installation
+"Happiness remembers the warmth; grief keeps the memory alive." — an original line inspired by Mango's companionship.
 
-1. Clone or download the project
-   ```bash
-   git clone <repository-url>
-   cd mango_project
-   ```
+## Project scope & scale
 
-2. Install dependencies
-   ```bash
-   pip install -r requirements.txt
-   ```
+- Intended audience: hobbyist Python learners and those who like small, nostalgic virtual-pet experiences.
+- Codebase size: ~2.5k–6k lines across a few modules (core game loop, UI, audio, assets, mini-games, DB persistence).
+- Features implemented:
+  - Core Tamagotchi gameplay (hunger, happiness, cleanliness, energy, health)
+  - Hub UI with persistent stat display and action buttons
+  - Multiple mini-games (Flappy Mango, Feed mini-game)
+  - Audio manager with diagnostics and SFX/Music handling
+  - SQLite persistence for game state and scores
+  - Configurable assets and modular code so you can add sprites/sounds easily
 
-3. Run the game
-   ```bash
-   python project.py
-   ```
+This project was intentionally kept small and approachable. It's a labor of love and a learning vehicle rather than a production-grade game engine.
 
-### Running Tests
+## Installation & running
+
+1. Create and activate a virtualenv (recommended):
+
 ```bash
-pytest test_project.py -v
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
-## How to Play
+2. Install dependencies:
 
-### Main Hub
-- Feed button: Increases hunger (+25) and happiness (+5)
-- Bathe button: Increases cleanliness (+30) and happiness (+10)
-- Play button: Increases happiness (+20) but decreases energy (-15)
-- Rest button: Increases energy (+30)
-- Medicine button: Heals Mango when sick
-- Discipline button: Reduces misbehavior but decreases happiness (-5)
-- Flappy Mango button: Launch the mini-game
-
-### Flappy Mango Mini-Game
-- Press SPACE to make Mango flap and avoid crows
-- Press ESC to return to the main hub
-- Press R to restart the game after game over
-- Score increases happiness based on performance
-
-### Stat Management
-- Hunger: Decreases naturally every 2 minutes (realistic Tamagotchi pace)
-- Happiness: Decreases if ignored, increases with care and weather
-- Cleanliness: Decreases over time
-- Energy: Decreases with play, increases with rest
-- Health: Decreases if other stats are too low for too long
-
-## Database Schema
-
-The game uses SQLite for data persistence with two main tables:
-
-### mango_state
-- Stores Mango's current stats (hunger, happiness, cleanliness, energy, health, age)
-- Only one Mango instance at a time
-- Auto-updates timestamp on saves
-
-### scores
-- Stores Flappy Mango high scores
-- Tracks play date and time
-- Used for leaderboard display
-
-## Project Structure
-
-```
-mango_project/
-│── project.py            # Main game file
-│── test_project.py       # Unit tests
-│── schema.sql            # Database schema
-│── requirements.txt      # Python dependencies (pygame, pytest, requests, pillow)
-│── README.md             # This file
-│
-├── assets/
-│   ├── sprites/          # Mango sprite images (PNG format)
-│   ├── backgrounds/      # Background images
-│   └── sounds/           # Audio assets (WAV format)
-└── db/
-    └── mango.db          # SQLite database (created automatically)
-```
-
-## Testing
-
-The project includes unit tests covering stat management, database operations, game mechanics, random events, age progression, and score saving.
-
-Run tests with:
 ```bash
-pytest test_project.py -v
+pip install -r requirements.txt
 ```
 
-## Customization
+3. Run the game:
 
-### Adding New Sprites
-1. Add sprite files to `assets/sprites/`
-2. Update the `draw_home_screen()` method to load and display new sprites
-3. Modify `get_mango_mood()` to include new mood states
+```bash
+python project.py
+```
 
-### Adding New Sounds
-1. Add sound files to `assets/sounds/`
-2. Use `pygame.mixer.Sound()` to load sounds
-3. Play sounds at appropriate game events
+## How to play (short)
 
-### Modifying Game Balance
-- Adjust stat decay rates in `update_stats()`
-- Modify stat gains from actions (feed, bathe, etc.)
-- Change random event probabilities in `check_random_events()`
+- Use the hub buttons to feed, bathe, play, rest, give medicine, or discipline Mango.
+- Click "Flappy Mango" to play the Flappy mini-game; press SPACE to flap, ESC to return.
+- Click "Feed" to play the Feed mini-game; move Mango left/right to catch falling seeds.
+- Monitor the stats panel to keep Mango healthy and happy.
 
-## Future Enhancements
+## Notes about the code & customization
 
-- Weather API integration - real weather affects Mango's mood
-- Custom sprites - different sprites for different moods
-- Bird facts API - educational content integration
-- Modern UI - clean, professional interface
-- Leaderboard - top Flappy Mango scores
-- Multiple pets - save/load multiple Mango profiles
-- Evolution system - more complex aging with visual changes
-- Additional mini-games
+- Sprites and backgrounds live in `assets/` and can be replaced with your own images.
+- `assets.py` prepares Mango sprites; `hub_ui.py`, `flappy.py`, and `feed_minigame.py` contain the UI and mini-game logic.
+- Audio is centralized in `audio.py` with diagnostic logging to `audio_debug.log` for troubleshooting.
 
-## Troubleshooting
+## A personal note
 
-Common issues:
+This project grew beyond the classroom assignment because Mango mattered. If you find the game brings a smile, know that it was made in memory of a small bird who made a big difference.
 
-Game won't start:
-- Ensure pygame is installed: `pip install pygame`
-- Check Python version (3.7+ required)
-
-Database errors:
-- Delete `db/mango.db` to reset the database
-- Ensure write permissions in the project directory
-
-Missing sprites/sounds:
-- The game works without assets (uses colored shapes)
-- Add sprite/sound files as described in asset README files
-
-Performance issues:
-- Reduce FPS in the `FPS` constant
-- Close other applications to free up resources
-
-## Technical Details
-
-### Architecture
-- Main class: `MangoTamagotchi` handles game logic
-- Game states: Uses state machine pattern for different screens
-- Database: SQLite
-- Graphics: Pygame for rendering and input handling
-
-### Key Algorithms
-- Stat decay: Time-based stat reduction with configurable rates
-- Random events: Probabilistic event system with cooldowns
-- Collision detection: Rectangle-based collision for Flappy Mango
-- Score system: Persistent high score tracking
-
-## License
-
-This project was created as part of CS50P coursework. Feel free to use and modify for educational purposes.
-
-## Author
-
-Created as a CS50P final project showcasing Python programming concepts including object-oriented programming, database management, game development, testing methodologies, and user interface design.
+If you'd like me to tweak the dedication, shorten it, or remove it, tell me what tone you'd prefer and I'll update the README.
 
 ---
 
-If you want the dedication phrasing changed, tell me and I'll update it.
-
-````
----
+Credits: Created as a CS50P final project and extended with community feedback and personal polish.
