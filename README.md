@@ -1,40 +1,54 @@
 # Mango: The Virtual Lovebird v2.0
 
-A modern Tamagotchi-inspired virtual pet game featuring Mango the lovebird, built as a CS50P Final Project. Enhanced with beautiful UI, real-world APIs, and sprite support.
+A modern Tamagotchi-inspired virtual pet game featuring Mango the lovebird, built as a CS50P Final Project. Enhanced with fun UI, real-world APIs, and sprite support. Inspired by my old bird friend Mango. May he rest in peace.
 
-## 🎮 Game Overview
+## Game Overview
 
 Take care of Mango, your virtual lovebird companion! Feed, bathe, play, and nurture Mango through different life stages while enjoying mini-games and watching your pet grow and evolve.
 
-## ✨ Features
+## Features
 
 ### Core Tamagotchi Features
 - **Hunger Management** - Feed Mango to keep hunger levels up
-- **Happiness System** - Play with Mango and win mini-games to increase happiness
-- **Cleanliness Care** - Bathe Mango to maintain hygiene
-- **Energy Management** - Let Mango rest to restore energy
-- **Health Monitoring** - Keep all stats balanced to maintain health
-- **Aging System** - Watch Mango grow from chick to adult over time
+````markdown
+# Mango: The Virtual Lovebird v2.0
+
+Mango is a Tamagotchi-inspired virtual pet game featuring Mango the lovebird, built as a final project for CS50's Introduction to Programming with Python at Harvard.
+
+This repository and the game are dedicated in loving memory of my pet love bird Mango (2019–2024). Mango was too beautiful for this world. He was more than a pet — he was my friend and a member of my family. I miss him deeply. May he be flying among the stars.
+
+## Game Overview
+
+Take care of Mango, your virtual lovebird companion. Feed, bathe, play, and nurture Mango through different life stages while enjoying mini-games and watching your pet grow.
+
+## Features
+
+### Core Tamagotchi Features
+- Hunger management: Feed Mango to keep hunger levels up
+- Happiness system: Play with Mango and win mini-games to increase happiness
+- Cleanliness care: Bathe Mango to maintain hygiene
+- Energy management: Let Mango rest to restore energy
+- Health monitoring: Keep all stats balanced to maintain health
+- Aging system: Watch Mango grow from chick to adult over time
 
 ### Mini-Game: Flappy Mango
-- Fly through the sky avoiding crows
+- Fly through the sky avoiding crow towers
 - Score points based on survival time
 - High scores are saved and displayed
 - Playing increases Mango's happiness
 
 ### Advanced Features
-- **Real-World Integration** - Weather API affects Mango's mood
-- **Educational Content** - Bird facts API provides learning opportunities
-- **Day/Night Cycle** - Background changes based on system time
-- **Random Events** - Mango can get sick or misbehave
-- **Medicine System** - Heal Mango when sick
-- **Discipline System** - Manage misbehavior
-- **Multiple Moods** - Different sprites based on Mango's condition
-- **Custom Sprites** - Load your own Mango images
-- **Game Over/Restart** - Start fresh when health reaches zero
-- **Modern UI** - Clean, professional interface without emojis
+- Real-world integration: Weather API affects Mango's mood
+- Educational content: Bird facts API provides learning opportunities
+- Day/night cycle: Background changes based on system time
+- Random events: Mango can get sick or misbehave
+- Medicine system: Heal Mango when sick
+- Discipline system: Manage misbehavior
+- Multiple moods: Different sprites based on Mango's condition
+- Custom sprites: Load your own Mango images
+- Game over/restart: Start fresh when health reaches zero
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.7 or higher
@@ -42,18 +56,18 @@ Take care of Mango, your virtual lovebird companion! Feed, bathe, play, and nurt
 
 ### Installation
 
-1. **Clone or download the project**
+1. Clone or download the project
    ```bash
    git clone <repository-url>
    cd mango_project
    ```
 
-2. **Install dependencies**
+2. Install dependencies
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Run the game**
+3. Run the game
    ```bash
    python project.py
    ```
@@ -63,31 +77,31 @@ Take care of Mango, your virtual lovebird companion! Feed, bathe, play, and nurt
 pytest test_project.py -v
 ```
 
-## 🎯 How to Play
+## How to Play
 
 ### Main Hub
-- **Feed Button** - Increases hunger (+25) and happiness (+5)
-- **Bathe Button** - Increases cleanliness (+30) and happiness (+10)
-- **Play Button** - Increases happiness (+20) but decreases energy (-15)
-- **Rest Button** - Increases energy (+30)
-- **Medicine Button** - Heals Mango when sick (+40 health)
-- **Discipline Button** - Reduces misbehavior but decreases happiness (-5)
-- **Flappy Mango Button** - Launch the mini-game
+- Feed button: Increases hunger (+25) and happiness (+5)
+- Bathe button: Increases cleanliness (+30) and happiness (+10)
+- Play button: Increases happiness (+20) but decreases energy (-15)
+- Rest button: Increases energy (+30)
+- Medicine button: Heals Mango when sick
+- Discipline button: Reduces misbehavior but decreases happiness (-5)
+- Flappy Mango button: Launch the mini-game
 
 ### Flappy Mango Mini-Game
-- Press **SPACE** to make Mango flap and avoid crows
-- Press **ESC** to return to the main hub
-- Press **R** to restart the game after game over
+- Press SPACE to make Mango flap and avoid crows
+- Press ESC to return to the main hub
+- Press R to restart the game after game over
 - Score increases happiness based on performance
 
 ### Stat Management
-- **Hunger** - Decreases naturally every 2 minutes (realistic Tamagotchi pace)
-- **Happiness** - Decreases if ignored, increases with care and weather
-- **Cleanliness** - Decreases over time
-- **Energy** - Decreases with play, increases with rest
-- **Health** - Decreases if other stats are too low for too long
+- Hunger: Decreases naturally every 2 minutes (realistic Tamagotchi pace)
+- Happiness: Decreases if ignored, increases with care and weather
+- Cleanliness: Decreases over time
+- Energy: Decreases with play, increases with rest
+- Health: Decreases if other stats are too low for too long
 
-## 🗄️ Database Schema
+## Database Schema
 
 The game uses SQLite for data persistence with two main tables:
 
@@ -101,47 +115,34 @@ The game uses SQLite for data persistence with two main tables:
 - Tracks play date and time
 - Used for leaderboard display
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 mango_project/
-│── project.py            # Main game file (1000+ lines)
-│── test_project.py       # Comprehensive unit tests (31 tests)
+│── project.py            # Main game file
+│── test_project.py       # Unit tests
 │── schema.sql            # Database schema
 │── requirements.txt      # Python dependencies (pygame, pytest, requests, pillow)
 │── README.md             # This file
 │
 ├── assets/
 │   ├── sprites/          # Mango sprite images (PNG format)
-│   │   ├── mango_idle.png
-│   │   ├── mango_happy.png
-│   │   ├── mango_sad.png
-│   │   ├── mango_tired.png
-│   │   └── mango_dirty.png
 │   ├── backgrounds/      # Background images
-│   │   ├── hub_bg.jpg    # Main hub background
-│   │   └── flappy_bg.jpg # Flappy Mango background
 │   └── sounds/           # Audio assets (WAV format)
 └── db/
     └── mango.db          # SQLite database (created automatically)
 ```
 
-## 🧪 Testing
+## Testing
 
-The project includes comprehensive unit tests covering:
-- Stat management and constraints
-- Database operations
-- Game mechanics
-- Random events
-- Age progression
-- Score saving
+The project includes unit tests covering stat management, database operations, game mechanics, random events, age progression, and score saving.
 
 Run tests with:
 ```bash
 pytest test_project.py -v
 ```
 
-## 🎨 Customization
+## Customization
 
 ### Adding New Sprites
 1. Add sprite files to `assets/sprites/`
@@ -158,65 +159,62 @@ pytest test_project.py -v
 - Modify stat gains from actions (feed, bathe, etc.)
 - Change random event probabilities in `check_random_events()`
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
-### Stretch Goals (Completed/In Progress)
-- **Weather API Integration** ✅ - Real weather affects Mango's mood
-- **Custom Sprites** ✅ - Different sprites for different moods
-- **Bird Facts API** ✅ - Educational content integration
-- **Modern UI** ✅ - Clean, professional interface
-- **Leaderboard** - Top 5 Flappy Mango scores
-- **Multiple Pets** - Save/load multiple Mango profiles
-- **Evolution System** - More complex aging with visual changes
-- **Mini-Games** - Additional games beyond Flappy Mango
+- Weather API integration - real weather affects Mango's mood
+- Custom sprites - different sprites for different moods
+- Bird facts API - educational content integration
+- Modern UI - clean, professional interface
+- Leaderboard - top Flappy Mango scores
+- Multiple pets - save/load multiple Mango profiles
+- Evolution system - more complex aging with visual changes
+- Additional mini-games
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
-### Common Issues
+Common issues:
 
-**Game won't start:**
+Game won't start:
 - Ensure pygame is installed: `pip install pygame`
 - Check Python version (3.7+ required)
 
-**Database errors:**
+Database errors:
 - Delete `db/mango.db` to reset the database
 - Ensure write permissions in the project directory
 
-**Missing sprites/sounds:**
+Missing sprites/sounds:
 - The game works without assets (uses colored shapes)
 - Add sprite/sound files as described in asset README files
 
-**Performance issues:**
+Performance issues:
 - Reduce FPS in the `FPS` constant
 - Close other applications to free up resources
 
-## 📝 Technical Details
+## Technical Details
 
 ### Architecture
-- **Main Class**: `MangoTamagotchi` handles all game logic
-- **Game States**: Uses state machine pattern for different screens
-- **Database**: SQLite with connection pooling
-- **Graphics**: Pygame for rendering and input handling
+- Main class: `MangoTamagotchi` handles game logic
+- Game states: Uses state machine pattern for different screens
+- Database: SQLite
+- Graphics: Pygame for rendering and input handling
 
 ### Key Algorithms
-- **Stat Decay**: Time-based stat reduction with configurable rates
-- **Random Events**: Probabilistic event system with cooldowns
-- **Collision Detection**: Rectangle-based collision for Flappy Mango
-- **Score System**: Persistent high score tracking
+- Stat decay: Time-based stat reduction with configurable rates
+- Random events: Probabilistic event system with cooldowns
+- Collision detection: Rectangle-based collision for Flappy Mango
+- Score system: Persistent high score tracking
 
-## 📄 License
+## License
 
-This project is created as part of CS50P coursework. Feel free to use and modify for educational purposes.
+This project was created as part of CS50P coursework. Feel free to use and modify for educational purposes.
 
-## 👨‍💻 Author
+## Author
 
-Created as a CS50P Final Project showcasing Python programming concepts including:
-- Object-oriented programming
-- Database management
-- Game development
-- Testing methodologies
-- User interface design
+Created as a CS50P final project showcasing Python programming concepts including object-oriented programming, database management, game development, testing methodologies, and user interface design.
 
 ---
 
-*Enjoy taking care of Mango!*
+If you want the dedication phrasing changed, tell me and I'll update it.
+
+````
+---

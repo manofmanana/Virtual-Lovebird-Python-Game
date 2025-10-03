@@ -18,6 +18,13 @@ import math
 import wave
 import struct
 
+# Pre-initialize the mixer for more reliable audio behavior on different platforms
+# Use common settings: 44100 Hz, 16-bit signed, stereo, small buffer
+try:
+    pygame.mixer.pre_init(44100, -16, 2, 512)
+except Exception:
+    pass
+
 # Initialize Pygame
 pygame.init()
 
@@ -180,33 +187,14 @@ class MangoTamagotchi:
         self.animation_time = 0
         self.button_hover = {}
         self.pulse_animation = 0
-        
-        # Load background images and sprites
-        self.load_background_images()
-        self.load_mango_sprites()
-        # Load optional sounds (placeholders for future sound files)
-        self.sounds = {}
-        self.load_mango_sounds()
-        # HUD messages and screen flash timer
-        self.hud_messages = []  # list of (text, expiry_timestamp)
-        self.flash_until = 0.0
-        
-        # Initialize database
-        self.init_database()
-        
-        # Load or create Mango's state
-        self.mango_state = self.load_state()
-        if not self.mango_state:
-            self.mango_state = {
-                'hunger': 80,
-                'happiness': 70,
-                'cleanliness': 60,
-                'energy': 90,
-                'health': 100,
-                'age': 0,
-                'last_updated': datetime.now().isoformat()
-            }
-            self.save_state()
+        # Audio volume controls (raised so sounds are audible by default)
+        self.master_volume = 0.9
+        self.sfx_volume = 0.9
+        self.music_volume = 0.6
+        # Do not start Flappy audio here during construction; defaults only
+        self._force_short_flap_in_flappy = False
+        # SFX visual indicator (last played SFX event)
+        self._last_sfx_event = None
         
         # Game variables
         self.last_stat_update = time.time()
@@ -218,66 +206,146 @@ class MangoTamagotchi:
         # Day/night cycle
         self.current_hour = datetime.now().hour
         self.is_night = self.current_hour < 6 or self.current_hour > 18
+
+        # Initialize database and load or create Mango's state
+        try:
+            self.init_database()
+        except Exception:
+            pass
+
+        try:
+            self.mango_state = self.load_state()
+            if not self.mango_state:
+                # create default state
+                self.mango_state = {
+                    'hunger': 80,
+                    'happiness': 70,
+                    'cleanliness': 60,
+                    'energy': 90,
+                    'health': 100,
+                    'age': 0,
+                    'last_updated': datetime.now().isoformat()
+                }
+                try:
+                    self.save_state()
+                except Exception:
+                    pass
+        except Exception:
+            # ensure attribute exists even on failure
+            self.mango_state = {
+                'hunger': 80,
+                'happiness': 70,
+                'cleanliness': 60,
+                'energy': 90,
+                'health': 100,
+                'age': 0,
+                'last_updated': datetime.now().isoformat()
+            }
+
+        # Load background images and sprites
+        try:
+            self.load_background_images()
+        except Exception:
+            pass
+        try:
+            self.load_mango_sprites()
+        except Exception:
+            pass
+
+        # Audio manager: encapsulate mixer, sounds, channels and helpers
+        try:
+            from audio import AudioManager
+            self.audio = AudioManager(self)
+            # mirror sounds dict for compatibility with rest of code
+            self.sounds = self.audio.sounds
+            # load/create sounds and channels
+            try:
+                self.audio.load_sounds()
+            except Exception:
+                pass
+        except Exception:
+            # fallback: keep old loader present but empty
+            self.sounds = {}
+
+        # HUD messages and screen flash timer
+        self.hud_messages = []  # list of (text, expiry_timestamp)
+        self.flash_until = 0.0
         
     def init_database(self):
         """Initialize the SQLite database with schema."""
-        os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        with open('schema.sql', 'r') as f:
-            schema = f.read()
-            cursor.executescript(schema)
-        
-        conn.commit()
-        conn.close()
+        try:
+            # Delegate to db helper for clarity
+            from db import init_database as _init_db
+            _init_db(self.db_path, schema_path='schema.sql')
+        except Exception:
+            # fallback to original inline behavior if helper unavailable
+            try:
+                os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
+                conn = sqlite3.connect(self.db_path)
+                cursor = conn.cursor()
+                with open('schema.sql', 'r') as f:
+                    schema = f.read()
+                    cursor.executescript(schema)
+                conn.commit()
+                conn.close()
+            except Exception:
+                pass
     
     def save_state(self):
         """Save Mango's current state to database."""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        # Clear existing state (only keep one Mango)
-        cursor.execute("DELETE FROM mango_state")
-        
-        # Insert new state
-        cursor.execute("""
-            INSERT INTO mango_state 
-            (hunger, happiness, cleanliness, energy, health, age, last_updated)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
-        """, (
-            self.mango_state['hunger'],
-            self.mango_state['happiness'],
-            self.mango_state['cleanliness'],
-            self.mango_state['energy'],
-            self.mango_state['health'],
-            self.mango_state['age'],
-            datetime.now().isoformat()
-        ))
-        
-        conn.commit()
-        conn.close()
+        try:
+            from db import save_state as _save_state
+            _save_state(self.db_path, self.mango_state)
+        except Exception:
+            try:
+                conn = sqlite3.connect(self.db_path)
+                cursor = conn.cursor()
+                cursor.execute("DELETE FROM mango_state")
+                cursor.execute(
+                    """
+                    INSERT INTO mango_state 
+                    (hunger, happiness, cleanliness, energy, health, age, last_updated)
+                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        self.mango_state['hunger'],
+                        self.mango_state['happiness'],
+                        self.mango_state['cleanliness'],
+                        self.mango_state['energy'],
+                        self.mango_state['health'],
+                        self.mango_state['age'],
+                        datetime.now().isoformat(),
+                    ),
+                )
+                conn.commit()
+                conn.close()
+            except Exception:
+                pass
     
     def load_state(self):
         """Load Mango's state from database."""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("SELECT * FROM mango_state ORDER BY id DESC LIMIT 1")
-        result = cursor.fetchone()
-        
-        conn.close()
-        
-        if result:
-            return {
-                'hunger': result[1],
-                'happiness': result[2],
-                'cleanliness': result[3],
-                'energy': result[4],
-                'health': result[5],
-                'age': result[6],
-                'last_updated': result[7]
-            }
+        try:
+            from db import load_state as _load_state
+            return _load_state(self.db_path)
+        except Exception:
+            try:
+                conn = sqlite3.connect(self.db_path)
+                cursor = conn.cursor()
+                cursor.execute("SELECT * FROM mango_state ORDER BY id DESC LIMIT 1")
+                result = cursor.fetchone()
+                conn.close()
+                if result:
+                    return {
+                        'hunger': result[1],
+                        'happiness': result[2],
+                        'cleanliness': result[3],
+                        'energy': result[4],
+                        'health': result[5],
+                        'age': result[6],
+                        'last_updated': result[7]
+                    }
+            except Exception:
+                pass
         return None
     
     def feed_mango(self):
@@ -330,8 +398,15 @@ class MangoTamagotchi:
 
         # Play medicine sound if available (non-fatal)
         try:
-            if 'medicine' in self.sounds:
-                self.sounds['medicine'].play()
+            # delegate to AudioManager for consistent behavior
+            try:
+                self._play_sfx('medicine')
+            except Exception:
+                if 'medicine' in self.sounds:
+                    try:
+                        self.sounds['medicine'].play()
+                    except Exception:
+                        pass
         except Exception:
             pass
 
@@ -398,120 +473,179 @@ class MangoTamagotchi:
             
             self.last_stat_update = current_time
             self.save_state()
-    
-    def load_background_images(self):
-        """Load background images for hub and flappy mango."""
-        self.hub_background = None
-        self.flappy_background = None
-        
+
+    def _apply_volume_settings(self):
+        """Apply current master/music/sfx volume settings to mixer and loaded sounds."""
         try:
-            # Try to load hub background
-            hub_bg_path = "assets/backgrounds/hub_bg.jpg"
-            if os.path.exists(hub_bg_path):
-                self.hub_background = pygame.image.load(hub_bg_path)
-                self.hub_background = pygame.transform.scale(self.hub_background, (SCREEN_WIDTH, SCREEN_HEIGHT))
-        except:
-            self.hub_background = None
-        
-        try:
-            # Try to load flappy background
-            flappy_bg_path = "assets/backgrounds/flappy_bg.jpg"
-            if os.path.exists(flappy_bg_path):
-                self.flappy_background = pygame.image.load(flappy_bg_path)
-                self.flappy_background = pygame.transform.scale(self.flappy_background, (SCREEN_WIDTH, SCREEN_HEIGHT))
-        except:
-            self.flappy_background = None
-    
-    def load_mango_sprites(self):
-        """Load Mango sprite images."""
-        self.mango_sprites = {}
-
-        sprite_files = {
-            'idle': 'mango_idle.png',
-            'happy': 'mango_happy.png',
-            'sad': 'mango_sad.png',
-            'tired': 'mango_tired.png',
-            'dirty': 'mango_dirty.png',
-            'flying': 'mango_flying.png',
-        }
-
-        # Helper: load and convert image to a pygame surface with alpha
-        def load_and_prepare(path, size=(100, 100)):
-            try:
-                # Use PIL for reliable alpha cropping and resizing
-                img = Image.open(path).convert('RGBA')
-
-                # Trim fully-transparent borders if present
-                bbox = img.split()[-1].getbbox()
-                if bbox:
-                    img = img.crop(bbox)
-
-                # Resize preserving aspect into a square canvas
-                img.thumbnail(size, Image.LANCZOS)
-                canvas = Image.new('RGBA', size, (0, 0, 0, 0))
-                x = (size[0] - img.width) // 2
-                y = (size[1] - img.height) // 2
-                canvas.paste(img, (x, y), img)
-
-                # Boost alpha if the sprite is accidentally faint
+            if pygame.mixer.get_init():
                 try:
-                    alpha = canvas.split()[-1]
-                    # Compute quick average alpha
-                    avg = sum(alpha.getdata()) / (size[0] * size[1])
-                    if avg < 60:
-                        # Increase alpha multiplicatively (clamped)
-                        def boost(a):
-                            return min(255, int(a * 1.6))
-                        alpha = alpha.point(boost)
-                        canvas.putalpha(alpha)
+                    pygame.mixer.music.set_volume(self.music_volume * self.master_volume)
+                except Exception:
+                    pass
+            # apply to loaded sounds
+            for s in list(self.sounds.keys()):
+                try:
+                    if self.sounds.get(s):
+                        self.sounds[s].set_volume(self.sfx_volume * self.master_volume)
                 except Exception:
                     pass
 
-                data = canvas.tobytes()
-                surf = pygame.image.fromstring(data, size, 'RGBA')
-                return surf.convert_alpha()
-            except Exception:
-                # Fall back to pygame loader
-                try:
-                    s = pygame.image.load(path).convert_alpha()
-                    return pygame.transform.smoothscale(s, size)
-                except Exception:
-                    return None
-
-        for mood, filename in sprite_files.items():
+            # Also apply to any dedicated channels we created
             try:
-                sprite_path = f"assets/sprites/{filename}"
-                if os.path.exists(sprite_path):
-                    self.mango_sprites[mood] = load_and_prepare(sprite_path, (100, 100))
-                    print(f"Loaded sprite: {filename}")
-                else:
-                    self.mango_sprites[mood] = None
-                    print(f"Sprite not found: {filename}")
-            except Exception as e:
-                self.mango_sprites[mood] = None
-                print(f"Error loading sprite {filename}: {e}")
+                for k, ch in getattr(self, '_sfx_channels', {}).items():
+                    if ch:
+                        try:
+                            ch.set_volume(self.sfx_volume * self.master_volume)
+                        except Exception:
+                            pass
+            except Exception:
+                pass
+        except Exception:
+            pass
 
-        # Process alternate flying sprite specially for flappy game
-        flying2_path = "assets/sprites/mango_flying2.png"
+
+    def _ensure_audio_ready(self):
+        """Delegates to AudioManager.ensure_audio_ready if available."""
         try:
-            if os.path.exists(flying2_path):
-                s2 = load_and_prepare(flying2_path, (100, 100))
-                if s2:
-                    self.mango_sprites['flying2'] = s2
-                    print("Loaded sprite: mango_flying2.png (processed)")
+            if getattr(self, 'audio', None):
+                return self.audio.ensure_audio_ready()
+        except Exception:
+            pass
+        return False
+
+    def _write_short_tone(self, path, freq=1500, duration_ms=160, volume=1.0):
+        try:
+            if getattr(self, 'audio', None):
+                return self.audio.write_short_tone(path, freq=freq, duration_ms=duration_ms, volume=volume)
+        except Exception:
+            pass
+        return False
+
+    def _write_thump(self, path, duration_ms=220, volume=0.9):
+        try:
+            if getattr(self, 'audio', None):
+                return self.audio.write_thump(path, duration_ms=duration_ms, volume=volume)
+        except Exception:
+            pass
+        return False
+    
+    def load_background_images(self):
+        """Load background images for hub and flappy mango."""
+        try:
+            from assets import load_background_images as _load_bg
+            _load_bg(self)
+        except Exception:
+            # fallback to inline loader
+            self.hub_background = None
+            self.flappy_background = None
+            try:
+                hub_bg_path = "assets/backgrounds/hub_bg.jpg"
+                if os.path.exists(hub_bg_path):
+                    self.hub_background = pygame.image.load(hub_bg_path)
+                    self.hub_background = pygame.transform.scale(self.hub_background, (SCREEN_WIDTH, SCREEN_HEIGHT))
+            except Exception:
+                self.hub_background = None
+            try:
+                flappy_bg_path = "assets/backgrounds/flappy_bg.jpg"
+                if os.path.exists(flappy_bg_path):
+                    self.flappy_background = pygame.image.load(flappy_bg_path)
+                    self.flappy_background = pygame.transform.scale(self.flappy_background, (SCREEN_WIDTH, SCREEN_HEIGHT))
+            except Exception:
+                self.flappy_background = None
+    
+    def load_mango_sprites(self):
+        """Load Mango sprite images."""
+        try:
+            from assets import load_mango_sprites as _load_sprites
+            _load_sprites(self)
+        except Exception:
+            # fallback to original inline loader if helper unavailable
+            self.mango_sprites = {}
+            sprite_files = {
+                'idle': 'mango_idle.png',
+                'happy': 'mango_happy.png',
+                'sad': 'mango_sad.png',
+                'tired': 'mango_tired.png',
+                'dirty': 'mango_dirty.png',
+                'flying': 'mango_flying.png',
+            }
+
+            def load_and_prepare(path, size=(100, 100)):
+                try:
+                    img = Image.open(path).convert('RGBA')
+                    bbox = img.split()[-1].getbbox()
+                    if bbox:
+                        img = img.crop(bbox)
+                    img.thumbnail(size, Image.LANCZOS)
+                    canvas = Image.new('RGBA', size, (0, 0, 0, 0))
+                    x = (size[0] - img.width) // 2
+                    y = (size[1] - img.height) // 2
+                    canvas.paste(img, (x, y), img)
+                    try:
+                        alpha = canvas.split()[-1]
+                        avg = sum(alpha.getdata()) / (size[0] * size[1])
+                        if avg < 60:
+                            def boost(a):
+                                return min(255, int(a * 1.6))
+                            alpha = alpha.point(boost)
+                            canvas.putalpha(alpha)
+                    except Exception:
+                        pass
+                    data = canvas.tobytes()
+                    surf = pygame.image.fromstring(data, size, 'RGBA')
+                    return surf.convert_alpha()
+                except Exception:
+                    try:
+                        s = pygame.image.load(path).convert_alpha()
+                        return pygame.transform.smoothscale(s, size)
+                    except Exception:
+                        return None
+
+            for mood, filename in sprite_files.items():
+                try:
+                    sprite_path = f"assets/sprites/{filename}"
+                    if os.path.exists(sprite_path):
+                        self.mango_sprites[mood] = load_and_prepare(sprite_path, (100, 100))
+                        print(f"Loaded sprite: {filename}")
+                    else:
+                        self.mango_sprites[mood] = None
+                        print(f"Sprite not found: {filename}")
+                except Exception as e:
+                    self.mango_sprites[mood] = None
+                    print(f"Error loading sprite {filename}: {e}")
+
+            flying2_path = "assets/sprites/mango_flying2.png"
+            try:
+                if os.path.exists(flying2_path):
+                    s2 = load_and_prepare(flying2_path, (100, 100))
+                    if s2:
+                        self.mango_sprites['flying2'] = s2
+                        print("Loaded sprite: mango_flying2.png (processed)")
+                    else:
+                        self.mango_sprites['flying2'] = self.mango_sprites.get('flying')
                 else:
                     self.mango_sprites['flying2'] = self.mango_sprites.get('flying')
-            else:
+            except Exception as e:
                 self.mango_sprites['flying2'] = self.mango_sprites.get('flying')
-        except Exception as e:
-            self.mango_sprites['flying2'] = self.mango_sprites.get('flying')
-            print(f"Error loading flying2 sprite: {e}")
+                print(f"Error loading flying2 sprite: {e}")
 
-        # Ensure keys exist even if None
-        if 'flying' not in self.mango_sprites:
-            self.mango_sprites['flying'] = None
-        if 'flying2' not in self.mango_sprites:
-            self.mango_sprites['flying2'] = None
+            if 'flying' not in self.mango_sprites:
+                self.mango_sprites['flying'] = None
+            if 'flying2' not in self.mango_sprites:
+                self.mango_sprites['flying2'] = None
+
+            self.tree_texture = None
+            tree_path = "assets/sprites/tree.png"
+            try:
+                if os.path.exists(tree_path):
+                    try:
+                        img = pygame.image.load(tree_path).convert_alpha()
+                        self.tree_texture = img
+                        print("Loaded tree texture for obstacles: tree.png")
+                    except Exception as e:
+                        print(f"Error loading tree texture: {e}")
+            except Exception:
+                pass
 
     def load_mango_sounds(self):
         """Load optional Mango sounds (non-fatal if missing).
@@ -520,62 +654,47 @@ class MangoTamagotchi:
         If loading fails (no mixer or missing files), stores nothing but
         keeps code paths safe.
         """
+        # Delegated to AudioManager; kept for backward compatibility.
         try:
-            # Initialize mixer if possible; ignore errors in headless/test envs
-            try:
-                pygame.mixer.init()
-            except Exception:
-                pass
+            if getattr(self, 'audio', None):
+                return self.audio.load_sounds()
+        except Exception:
+            pass
+        return None
+    def _play_music(self, key):
+        try:
+            if getattr(self, 'audio', None):
+                return self.audio.play_music(key)
+        except Exception:
+            pass
+        return None
 
-            flap_path = "assets/sounds/flap.wav"
-            med_path = "assets/sounds/medicine.wav"
+    def _stop_music(self):
+        try:
+            if getattr(self, 'audio', None):
+                return self.audio.stop_music()
+        except Exception:
+            pass
+        return None
 
-            # If the sound files don't exist, generate tiny placeholders so
-            # users immediately hear something without adding assets.
-            def write_placeholder(path, freq=1000, duration_ms=120, volume=0.2):
-                # Create a short sine wave WAV file
-                framerate = 44100
-                amplitude = int(32767 * volume)
-                nframes = int(framerate * duration_ms / 1000)
-                with wave.open(path, 'w') as wf:
-                    wf.setnchannels(1)
-                    wf.setsampwidth(2)
-                    wf.setframerate(framerate)
-                    for i in range(nframes):
-                        t = i / framerate
-                        val = int(amplitude * math.sin(2 * math.pi * freq * t))
-                        wf.writeframes(struct.pack('<h', val))
+    def _play_sfx(self, key, maxtime=None):
+        """Safely play a short sound effect by key from self.sounds. Optionally limit duration (ms)."""
+        try:
+            if getattr(self, 'audio', None):
+                return self.audio.play_sfx(key, maxtime=maxtime)
+        except Exception:
+            pass
+        return None
 
-            if not os.path.exists(os.path.dirname(flap_path)):
-                os.makedirs(os.path.dirname(flap_path), exist_ok=True)
-            if not os.path.exists(flap_path):
-                try:
-                    write_placeholder(flap_path, freq=1500, duration_ms=100, volume=0.15)
-                    print("Created placeholder sound: flap.wav")
-                except Exception as e:
-                    print(f"Could not create flap placeholder: {e}")
-            if not os.path.exists(med_path):
-                try:
-                    write_placeholder(med_path, freq=800, duration_ms=180, volume=0.18)
-                    print("Created placeholder sound: medicine.wav")
-                except Exception as e:
-                    print(f"Could not create medicine placeholder: {e}")
-
-            if os.path.exists(flap_path):
-                try:
-                    self.sounds['flap'] = pygame.mixer.Sound(flap_path)
-                    print("Loaded sound: flap.wav")
-                except Exception as e:
-                    print(f"Error loading flap sound: {e}")
-            if os.path.exists(med_path):
-                try:
-                    self.sounds['medicine'] = pygame.mixer.Sound(med_path)
-                    print("Loaded sound: medicine.wav")
-                except Exception as e:
-                    print(f"Error loading medicine sound: {e}")
-        except Exception as e:
-            # Any sound init failures should not break the game
-            print(f"Sound loading skipped: {e}")
+    def _play_debug_tone(self, freq=800, duration_ms=300, volume=1.0):
+        """Play a short loud debug tone via mixer to test output path immediately."""
+        try:
+            if getattr(self, 'audio', None):
+                return self.audio.play_debug_tone(freq=freq, duration_ms=duration_ms, volume=volume)
+        except Exception:
+            pass
+        return None
+    
     
     def draw_gradient_background(self):
         """Draw a beautiful gradient background."""
@@ -748,10 +867,134 @@ class MangoTamagotchi:
         game_started = False
         last_score_update = 0
         
+        # Start flappy background music
+        try:
+            # Ensure mixer initialized and volumes are applied
+            self._ensure_audio_ready()
+            self._apply_volume_settings()
+
+
+            # Force-play a quick flap/thump test so we exercise the SFX path and
+            # make sure the user hears something on entering Flappy.
+            try:
+                flap_path = "assets/sounds/flap.wav"
+                thump_path = "assets/sounds/thump.wav"
+                if os.path.exists(flap_path):
+                    try:
+                        s = pygame.mixer.Sound(flap_path)
+                        s.set_volume(min(1.0, self.sfx_volume * self.master_volume))
+                        try:
+                            # Prefer to use audio manager's safe sfx channel if available
+                            if getattr(self, 'audio', None):
+                                ch0 = self.audio._get_sfx_channel() or pygame.mixer.Channel(0)
+                            else:
+                                ch0 = pygame.mixer.Channel(0)
+                            try:
+                                ch0.set_volume(min(1.0, self.sfx_volume * self.master_volume))
+                            except Exception:
+                                pass
+                            ch0.play(s)
+                            print("[audio] forced play: flap on channel (safe)")
+                        except Exception:
+                            s.play()
+                            print("[audio] forced play: flap via Sound.play()")
+                    except Exception as e:
+                        print(f"[audio] forced flap load/play failed: {e}")
+                if os.path.exists(thump_path):
+                    try:
+                        t = pygame.mixer.Sound(thump_path)
+                        t.set_volume(min(1.0, self.sfx_volume * self.master_volume))
+                        try:
+                            if getattr(self, 'audio', None):
+                                ch1 = self.audio._get_sfx_channel() or pygame.mixer.Channel(1)
+                            else:
+                                ch1 = pygame.mixer.Channel(1)
+                            try:
+                                ch1.set_volume(min(1.0, self.sfx_volume * self.master_volume))
+                            except Exception:
+                                pass
+                            ch1.play(t)
+                            print("[audio] forced play: thump on channel (safe)")
+                        except Exception:
+                            t.play()
+                            print("[audio] forced play: thump via Sound.play()")
+                    except Exception as e:
+                        print(f"[audio] forced thump load/play failed: {e}")
+            except Exception:
+                pass
+
+            # Enable forced short flap tone while in Flappy to make flap audible
+            self._force_short_flap_in_flappy = True
+            # SFX visual indicator
+            self._last_sfx_event = None
+
+            # Now start background music
+            self._play_music('forest')
+            # Enable music watchdog via AudioManager so forest keeps looping
+            # if the backend stops playback unexpectedly.
+            try:
+                if getattr(self, 'audio', None):
+                    self.audio.start_watchdog('forest')
+                else:
+                    # fallback to old flag for compatibility
+                    self._music_watchdog = True
+            except Exception:
+                pass
+            # Temporarily boost audio volumes for Flappy entry so short SFX and
+            # background forest music are audible even if user sliders are low.
+            try:
+                # save current volumes
+                self._audio_saved_volumes = (self.master_volume, self.music_volume, self.sfx_volume)
+                # test boost values (not permanent)
+                self.master_volume = max(self.master_volume, 1.0)
+                # make music more present and sfx louder for the short entry period
+                self.music_volume = max(self.music_volume, 0.6)
+                self.sfx_volume = max(self.sfx_volume, 0.85)
+                # apply immediately
+                try:
+                    self._apply_volume_settings()
+                except Exception:
+                    pass
+                self._audio_temp_restore_at = time.time() + 3.0
+                print("[audio] temporary audio boost applied for Flappy entry")
+                # Auto-play debug tone only in dev mode
+                try:
+                    if getattr(self, '_dev_mode', False):
+                        try:
+                            self._play_debug_tone(freq=900, duration_ms=400, volume=1.0)
+                            print("[audio] auto debug tone played on Flappy entry (dev_mode)")
+                        except Exception:
+                            pass
+                except Exception:
+                    pass
+            except Exception:
+                pass
+        except Exception:
+            pass
+
         while self.state == GameState.FLAPPY_MANGO:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.state = GameState.TAMAGOTCHI_HUB
+                    # stop flappy music and resume home music
+                    try:
+                        self._stop_music()
+                        self._play_music('home')
+                    except Exception:
+                        pass
+                    # clear forced debug mode
+                    try:
+                        self._force_short_flap_in_flappy = False
+                    except Exception:
+                        pass
+                    # stop audio watchdog if present
+                    try:
+                        if getattr(self, 'audio', None):
+                            self.audio.stop_watchdog()
+                        else:
+                            self._music_watchdog = False
+                    except Exception:
+                        pass
                     return
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_SPACE:
@@ -759,29 +1002,75 @@ class MangoTamagotchi:
                             game_started = True
                         if not game_over:
                             mango_velocity = jump_strength
-                            # play flap sound if available
+                            # play flap sound via central _play_sfx (safer)
                             try:
-                                if 'flap' in self.sounds:
-                                    # Play only the first 1000ms of the flap sound to avoid long tails
+                                # If we forced short flap tone for Flappy, play that
+                                if getattr(self, '_force_short_flap_in_flappy', False):
                                     try:
-                                        self.sounds['flap'].play(maxtime=1000)
-                                    except TypeError:
-                                        # Older pygame may not support maxtime; fallback to play()
-                                        self.sounds['flap'].play()
-                            except Exception:
-                                pass
-                            # toggle which flying sprite to use for smooth animation
-                            # start a short crossfade between flying and flying2
-                            # keep track by storing a small crossfade state
-                            if not hasattr(self, '_flap_fade'):
-                                self._flap_fade = {'progress': 0.0, 'direction': 1}
-                            else:
-                                # trigger toggle
-                                self._flap_fade['direction'] = 1
+                                        # ensure debug short file exists
+                                        debug_path = 'assets/sounds/_flap_short_debug.wav'
+                                        if not os.path.exists(debug_path):
+                                            try:
+                                                self._write_short_tone(debug_path, freq=1500, duration_ms=160, volume=1.0)
+                                            except Exception:
+                                                pass
+                                        try:
+                                            # Use central debug tone or short-file playback via audio manager
+                                            try:
+                                                self._play_debug_tone(freq=1500, duration_ms=160, volume=1.0)
+                                                self._last_sfx_event = 'flap (debug)'
+                                            except Exception:
+                                                # final fallback to central sfx
+                                                self._play_sfx('flap', maxtime=2000)
+                                        except Exception:
+                                            # fallback to normal play
+                                            self._play_sfx('flap', maxtime=2000)
+                                    except Exception:
+                                        self._play_sfx('flap', maxtime=2000)
+                                else:
+                                    # always prefer SFX channel play so music isn't interrupted
+                                    self._play_sfx('flap', maxtime=2000)
+                                # record last event when using normal path too
+                                if self._last_sfx_event is None:
+                                    try:
+                                        self._last_sfx_event = 'flap'
+                                    except Exception:
+                                        pass
+                            except Exception as e:
+                                print(f"[audio] _play_sfx flap failed: {e}")
+                            # Mark flap time so we show the alternate flying sprite for a short duration
+                            self._flap_start = time.time()
+                            self._flap_duration = 0.25  # seconds to show flying2
                     elif event.key == pygame.K_ESCAPE:
+                        # play button feedback then exit
+                        try:
+                            self._play_sfx('button')
+                        except Exception:
+                            pass
                         self.state = GameState.TAMAGOTCHI_HUB
+                        try:
+                            self._stop_music()
+                            self._play_music('home')
+                        except Exception:
+                            pass
+                        try:
+                            self._force_short_flap_in_flappy = False
+                        except Exception:
+                            pass
+                        try:
+                            if getattr(self, 'audio', None):
+                                self.audio.stop_watchdog()
+                            else:
+                                self._music_watchdog = False
+                        except Exception:
+                            pass
                         return
                     elif event.key == pygame.K_r and game_over:
+                        # play button feedback for restart
+                        try:
+                            self._play_sfx('button')
+                        except Exception:
+                            pass
                         # Restart game
                         mango_x = 150
                         mango_y = SCREEN_HEIGHT // 2
@@ -791,6 +1080,12 @@ class MangoTamagotchi:
                         game_over = False
                         game_started = False
                         last_score_update = 0
+                    elif event.key == pygame.K_d:
+                        # Play a loud debug tone to test audio output path
+                        try:
+                            self._play_debug_tone(freq=1200, duration_ms=300, volume=1.0)
+                        except Exception as e:
+                            print(f"[audio-debug] debug tone failed: {e}")
             
             if not game_over and game_started:
                 # Update Mango
@@ -830,14 +1125,125 @@ class MangoTamagotchi:
                     
                     if mango_rect.colliderect(top_rect) or mango_rect.colliderect(bottom_rect):
                         game_over = True
+                        # play thump on collision
+                        try:
+                            self._play_sfx('thump')
+                        except Exception:
+                            pass
                         break
                 
                 # Ground/ceiling collision
                 if mango_y >= SCREEN_HEIGHT - 60 or mango_y <= -150:
                     game_over = True
+                    try:
+                        self._play_sfx('thump')
+                    except Exception:
+                        pass
             
             # Draw flappy background
             self.draw_flappy_background()
+
+            # Small on-screen audio debug overlay (top-left) — only in dev mode
+            if getattr(self, '_dev_mode', False):
+                try:
+                    ox, oy = 8, 8
+                    box_w, box_h = 320, 120
+                    dbg_rect = pygame.Rect(ox, oy, box_w, box_h)
+                    s = pygame.Surface((box_w, box_h), pygame.SRCALPHA)
+                    s.fill((20, 20, 20, 180))
+                    self.screen.blit(s, (ox, oy))
+                    # Mixer info
+                    try:
+                        init = bool(pygame.mixer.get_init())
+                    except Exception:
+                        init = False
+                    try:
+                        nch = pygame.mixer.get_num_channels()
+                    except Exception:
+                        nch = 'N/A'
+                    lines = [f"mixer_init: {init}", f"channels: {nch}", f"master: {self.master_volume:.2f}", f"music: {self.music_volume:.2f}", f"sfx: {self.sfx_volume:.2f}"]
+                    for i, ln in enumerate(lines):
+                        txt = self.tiny_font.render(ln, True, WHITE)
+                        self.screen.blit(txt, (ox + 8, oy + 8 + i * 18))
+
+                    # Tail of audio_debug.log
+                    try:
+                        if os.path.exists('audio_debug.log'):
+                            with open('audio_debug.log', 'r') as _lf:
+                                tail = _lf.read().splitlines()[-4:]
+                            for j, ln in enumerate(tail):
+                                txt = self.tiny_font.render(ln[-60:], True, (200, 200, 200))
+                                self.screen.blit(txt, (ox + 8, oy + 8 + (5 + j) * 16))
+                    except Exception:
+                        pass
+                except Exception:
+                    pass
+
+            # If we temporarily swapped music for SFX (mixer.music), restore forest when scheduled
+            try:
+                if getattr(self, '_music_restore_at', None) and time.time() >= self._music_restore_at:
+                    # restore forest music
+                    try:
+                        self._play_music('forest')
+                    except Exception:
+                        pass
+                    self._music_restore_at = None
+            except Exception:
+                pass
+
+            # Music watchdog: handled by AudioManager when available
+            try:
+                if getattr(self, 'audio', None):
+                    try:
+                        self.audio.watchdog_tick()
+                    except Exception:
+                        pass
+                else:
+                    # fallback to previous inline watchdog behavior
+                    try:
+                        if getattr(self, '_music_watchdog', False) and getattr(self, '_music_playing', None) == 'forest':
+                            busy = False
+                            try:
+                                if getattr(self, '_music_mode', None) == 'music':
+                                    busy = bool(pygame.mixer.music.get_busy())
+                                elif getattr(self, '_music_mode', None) == 'sound':
+                                    ch = getattr(self, '_music_channel', None)
+                                    if ch:
+                                        try:
+                                            busy = bool(ch.get_busy())
+                                        except Exception:
+                                            busy = False
+                                    else:
+                                        busy = False
+                            except Exception:
+                                busy = True
+
+                            if not busy:
+                                try:
+                                    self._play_music('forest')
+                                except Exception:
+                                    pass
+                    except Exception:
+                        pass
+            except Exception:
+                pass
+
+            # Restore temporary boost volumes if set
+            try:
+                if getattr(self, '_audio_temp_restore_at', None) and time.time() >= self._audio_temp_restore_at:
+                    try:
+                        mv, musv, sfxv = getattr(self, '_audio_saved_volumes', (self.master_volume, self.music_volume, self.sfx_volume))
+                        self.master_volume, self.music_volume, self.sfx_volume = mv, musv, sfxv
+                        try:
+                            self._apply_volume_settings()
+                        except Exception:
+                            pass
+                        print("[audio] temporary audio boost restored to previous levels")
+                    except Exception:
+                        pass
+                    self._audio_temp_restore_at = None
+            except Exception:
+                pass
             
             # Draw realistic crows with shadows
             for crow in crows:
@@ -851,14 +1257,34 @@ class MangoTamagotchi:
                                (crow['x'] + shadow_offset, crow['y'] + crow['gap'] // 2 + shadow_offset, 70, 
                                 SCREEN_HEIGHT - crow['y'] - crow['gap'] // 2))
                 
-                # Top crow body (more realistic)
-                crow_top_rect = pygame.Rect(crow['x'], 0, 70, crow['y'] - crow['gap'] // 2)
-                pygame.draw.rect(self.screen, BLACK, crow_top_rect, border_radius=12)
-                
-                # Bottom crow body (more realistic)
-                crow_bottom_rect = pygame.Rect(crow['x'], crow['y'] + crow['gap'] // 2, 70, 
-                                             SCREEN_HEIGHT - crow['y'] - crow['gap'] // 2)
-                pygame.draw.rect(self.screen, BLACK, crow_bottom_rect, border_radius=12)
+                # Top obstacle body (use tree texture if available, else brown)
+                top_h = max(8, crow['y'] - crow['gap'] // 2)
+                bottom_h = max(8, SCREEN_HEIGHT - crow['y'] - crow['gap'] // 2)
+                try:
+                    if getattr(self, 'tree_texture', None):
+                        # scale texture to obstacle size and blit
+                        tex_top = pygame.transform.smoothscale(self.tree_texture, (70, top_h))
+                        self.screen.blit(tex_top, (crow['x'], 0))
+                        tex_bot = pygame.transform.smoothscale(self.tree_texture, (70, bottom_h))
+                        # flip vertically for bottom so grain direction looks natural
+                        try:
+                            tex_bot = pygame.transform.flip(tex_bot, False, True)
+                        except Exception:
+                            pass
+                        self.screen.blit(tex_bot, (crow['x'], crow['y'] + crow['gap'] // 2))
+                    else:
+                        # fallback warm wood/brown rectangles
+                        WOOD_BROWN = (101, 67, 33)
+                        crow_top_rect = pygame.Rect(crow['x'], 0, 70, top_h)
+                        pygame.draw.rect(self.screen, WOOD_BROWN, crow_top_rect, border_radius=12)
+                        crow_bottom_rect = pygame.Rect(crow['x'], crow['y'] + crow['gap'] // 2, 70, bottom_h)
+                        pygame.draw.rect(self.screen, WOOD_BROWN, crow_bottom_rect, border_radius=12)
+                except Exception:
+                    # ultimate fallback to black so game still renders
+                    crow_top_rect = pygame.Rect(crow['x'], 0, 70, top_h)
+                    pygame.draw.rect(self.screen, BLACK, crow_top_rect, border_radius=12)
+                    crow_bottom_rect = pygame.Rect(crow['x'], crow['y'] + crow['gap'] // 2, 70, bottom_h)
+                    pygame.draw.rect(self.screen, BLACK, crow_bottom_rect, border_radius=12)
                 
                 # Draw realistic crow heads with beaks
                 head_y_top = crow['y'] - crow['gap'] // 2 - 15
@@ -895,72 +1321,35 @@ class MangoTamagotchi:
             except Exception:
                 pass
 
-            # Try to use sprite image, fallback to drawn shapes
+                # Try to use sprite image, fallback to drawn shapes
             if hasattr(self, 'mango_sprites') and self.mango_sprites.get('flying'):
                 # Use actual sprite images (larger for flappy game)
                 sprite1 = self.mango_sprites.get('flying')
                 sprite2 = self.mango_sprites.get('flying2')
                 flappy_sprite1 = pygame.transform.scale(sprite1, (90, 90)) if sprite1 else None
                 flappy_sprite2 = pygame.transform.scale(sprite2, (90, 90)) if sprite2 else None
+                # If flap was pressed recently, use the alternate flying sprite for a short duration
+                use_alt = False
+                if hasattr(self, '_flap_start') and flappy_sprite2:
+                    if time.time() - getattr(self, '_flap_start', 0) < getattr(self, '_flap_duration', 0.5):
+                        use_alt = True
 
-                # Handle crossfade progress if present
-                if hasattr(self, '_flap_fade') and flappy_sprite2:
-                    fade = self._flap_fade
-                    # Slightly slower crossfade for a smoother, less jarring look
-                    fade['progress'] = min(1.0, fade.get('progress', 0.0) + 0.12)
-                    alpha2 = int(255 * fade['progress'])
-                    alpha1 = 255 - alpha2
-
-                    # Use a dedicated SRCALPHA surface to composite both sprites so
-                    # per-pixel alpha is respected and we avoid odd semi-transparent artifacts.
+                try:
+                    if use_alt and flappy_sprite2:
+                        # Show alternate sprite (flying2) for the flap duration
+                        sprite_rect = flappy_sprite2.get_rect(center=(int(mango_x), int(mango_y)))
+                        self.screen.blit(flappy_sprite2, sprite_rect)
+                    else:
+                        # Default sprite
+                        sprite_rect = flappy_sprite1.get_rect(center=(int(mango_x), int(mango_y)))
+                        self.screen.blit(flappy_sprite1, sprite_rect)
+                except Exception:
+                    # final fallback to drawn mango
                     try:
-                        size = (90, 90)
-                        blended = pygame.Surface(size, pygame.SRCALPHA)
-
-                        # Before blending, do a quick alpha-quality check on sprite2
-                        use_blend = True
-                        try:
-                            # Sample alpha channel mean by converting to string buffer
-                            arr = pygame.surfarray.pixels_alpha(flappy_sprite2)
-                            avg_alpha = float(arr.mean()) if arr.size else 255.0
-                            # If flying2 is mostly transparent, avoid blending
-                            if avg_alpha < 40:
-                                use_blend = False
-                        except Exception:
-                            use_blend = True
-
-                        if use_blend:
-                            # Prepare temporary copies and apply per-surface alpha
-                            if flappy_sprite1:
-                                tmp1 = flappy_sprite1.copy()
-                                tmp1.set_alpha(alpha1)
-                                blended.blit(tmp1, (0, 0))
-                            if flappy_sprite2:
-                                tmp2 = flappy_sprite2.copy()
-                                tmp2.set_alpha(alpha2)
-                                blended.blit(tmp2, (0, 0))
-
-                            rect = blended.get_rect(center=(int(mango_x), int(mango_y)))
-                            self.screen.blit(blended, rect)
-                        else:
-                            # Fallback: prefer sprite1 so Mango appears solid
-                            sprite_rect = flappy_sprite1.get_rect(center=(int(mango_x), int(mango_y)))
-                            self.screen.blit(flappy_sprite1, sprite_rect)
+                        sprite_rect = flappy_sprite1.get_rect(center=(int(mango_x), int(mango_y)))
+                        self.screen.blit(flappy_sprite1, sprite_rect)
                     except Exception:
-                        # If anything goes wrong with blending, fallback to simple swap
-                        try:
-                            sprite_rect = flappy_sprite1.get_rect(center=(int(mango_x), int(mango_y)))
-                            self.screen.blit(flappy_sprite1, sprite_rect)
-                        except Exception:
-                            pass
-
-                    # Reset fade if finished so next SPACE restarts it
-                    if fade['progress'] >= 1.0:
-                        fade['progress'] = 0.0
-                else:
-                    # Simple swap if no second sprite or no fade state
-                    sprite_rect = flappy_sprite1.get_rect(center=(int(mango_x), int(mango_y)))
-                    self.screen.blit(flappy_sprite1, sprite_rect)
+                        pass
             else:
                 # Fallback to drawn Mango
                 # Mango body
@@ -1049,6 +1438,11 @@ class MangoTamagotchi:
         """Draw the modern Tamagotchi hub screen."""
         # Draw background (image or gradient)
         self.draw_hub_background()
+        # Ensure home music is playing in the hub
+        try:
+            self._play_music('home')
+        except Exception:
+            pass
         
         # Update animations
         self.animation_time += 0.1
@@ -1167,6 +1561,22 @@ class MangoTamagotchi:
             hud_surf = self.font.render(text, True, BLACK)
             hud_rect = hud_surf.get_rect(center=(SCREEN_WIDTH // 2, 100 + i * 28))
             self.screen.blit(hud_surf, hud_rect)
+
+        # Random hub chirps occasionally
+        try:
+            if hasattr(self, '_next_chirp_at') and time.time() >= self._next_chirp_at:
+                try:
+                    self._play_sfx('chirp')
+                except Exception:
+                    try:
+                        if 'chirp' in self.sounds:
+                            self.sounds['chirp'].play()
+                    except Exception:
+                        pass
+                # schedule next chirp
+                self._next_chirp_at = time.time() + random.uniform(5.0, 20.0)
+        except Exception:
+            pass
 
         # Modern stats panel
         stats_x, stats_y = 400, 120
@@ -1291,10 +1701,84 @@ class MangoTamagotchi:
             fact_text = self.tiny_font.render(bird_fact, True, BLACK)
             text_rect = fact_text.get_rect(center=fact_rect.center)
             self.screen.blit(fact_text, text_rect)
+
+        # Compact audio settings dropdown (top-left) to avoid blocking hub stats
+        try:
+            # smaller button placed near the top-left corner
+            btn_w, btn_h = 100, 28
+            btn_x, btn_y = 12, 8
+            btn_rect = pygame.Rect(btn_x, btn_y, btn_w, btn_h)
+            self._audio_dropdown_btn_rect = btn_rect
+            pygame.draw.rect(self.screen, (30, 30, 30), btn_rect, border_radius=8)
+            pygame.draw.rect(self.screen, WHITE, btn_rect, 2, border_radius=8)
+            # remove emoji/triangle from label for a cleaner look
+            btn_label = self.small_font.render("Audio", True, WHITE)
+            self.screen.blit(btn_label, (btn_x + 12, btn_y + 7))
+
+            if self._audio_dropdown_open:
+                # small dropdown below the button with three compact sliders
+                # ensure dropdown is compact and fully within the dropdown box
+                dd_w = btn_w + 40
+                # increase dropdown height so sliders sit lower visually
+                dd_h = 130
+                dd_x = btn_x
+                # drop the dropdown slightly further down so it feels nested
+                dd_y = btn_y + btn_h + 10
+                dd_rect = pygame.Rect(dd_x, dd_y, dd_w, dd_h)
+                pygame.draw.rect(self.screen, (25, 25, 25), dd_rect, border_radius=8)
+                pygame.draw.rect(self.screen, WHITE, dd_rect, 1, border_radius=8)
+
+                def draw_compact_slider(key, y_offset, value):
+                    sx = dd_x + 8
+                    sw = max(80, dd_w - 16)
+                    # place sliders lower for a nested dropdown look
+                    sy = dd_y + y_offset
+                    # small track (wider and slightly lower)
+                    tr = pygame.Rect(sx, sy + 6, sw, 8)
+                    pygame.draw.rect(self.screen, DARK_GRAY, tr, border_radius=4)
+                    fw = int(value * sw)
+                    fr = pygame.Rect(sx, sy + 6, fw, 8)
+                    pygame.draw.rect(self.screen, GREEN, fr, border_radius=4)
+                    # slightly taller thumb centered on track
+                    tx = sx + fw
+                    tr_thumb = pygame.Rect(tx - 5, sy + 2, 10, 14)
+                    pygame.draw.rect(self.screen, WHITE, tr_thumb, border_radius=4)
+                    lbl = self.tiny_font.render(key[0].upper() + key[1:], True, WHITE)
+                    # label above the slider with a bit more spacing
+                    self.screen.blit(lbl, (sx, sy - 10))
+                    # ensure the rect fits within dropdown (slightly inset)
+                    self._audio_sliders[key]['rect'] = pygame.Rect(sx, sy, sw, 24)
+
+                # lower offsets so sliders appear nested inside the dropdown
+                draw_compact_slider('master', 18, max(0.0, min(1.0, self.master_volume)))
+                draw_compact_slider('music', 58, max(0.0, min(1.0, self.music_volume)))
+                draw_compact_slider('sfx', 98, max(0.0, min(1.0, self.sfx_volume)))
+        except Exception:
+            pass
     
     def handle_click(self, pos):
         """Handle mouse clicks on the hub screen."""
         x, y = pos
+
+        # Audio dropdown button handling (top-left)
+        try:
+            btn = self._audio_dropdown_btn_rect
+            if btn and btn.collidepoint(pos):
+                self._audio_dropdown_open = not self._audio_dropdown_open
+                return
+            # if clicking outside dropdown, close it
+            if self._audio_dropdown_open:
+                # if click not inside any slider rect, close dropdown
+                inside = False
+                for meta in self._audio_sliders.values():
+                    r = meta.get('rect')
+                    if r and r.collidepoint(pos):
+                        inside = True
+                        break
+                if not inside:
+                    self._audio_dropdown_open = False
+        except Exception:
+            pass
         
         # Check action buttons (modern layout)
         button_y = 550
@@ -1319,7 +1803,21 @@ class MangoTamagotchi:
             button_rect = pygame.Rect(button_x, button_y, button_width, button_height)
             
             if button_rect.collidepoint(pos):
-                action()
+                # perform the action and play a button sound for feedback
+                try:
+                    result = action()
+                except Exception:
+                    result = None
+
+                # If this was the Medicine button, only play the medicine sound
+                try:
+                    if text == 'Medicine':
+                        self._play_sfx('medicine')
+                    else:
+                        self._play_sfx('button')
+                except Exception:
+                    pass
+
                 return
         
         # Check Flappy Mango button (top right)
@@ -1327,7 +1825,60 @@ class MangoTamagotchi:
         flappy_y = 80
         flappy_rect = pygame.Rect(flappy_x, flappy_y, 150, 60)
         if flappy_rect.collidepoint(pos):
+            # Play button sfx when entering Flappy; use normal button sound
+            try:
+                self._play_sfx('button')
+            except Exception:
+                pass
+            # Stop hub music and start flappy music
+            try:
+                self._stop_music()
+                self._play_music('forest')
+            except Exception:
+                pass
             self.play_flappy_mango()
+
+        # Check audio sliders start (click-to-drag)
+        try:
+            for key, meta in self._audio_sliders.items():
+                r = meta.get('rect')
+                if r and r.collidepoint(pos):
+                    # start dragging this slider
+                    meta['dragging'] = True
+                    # set value immediately based on x
+                    rel = (pos[0] - r.x) / float(r.w)
+                    val = max(0.0, min(1.0, rel))
+                    if key == 'master':
+                        self.master_volume = val
+                    elif key == 'music':
+                        self.music_volume = val
+                    elif key == 'sfx':
+                        self.sfx_volume = val
+                    # apply volumes
+                    try:
+                        pygame.mixer.music.set_volume(self.music_volume * self.master_volume)
+                    except Exception:
+                        pass
+                    try:
+                        # set global sfx volumes (each sound keeps own setting)
+                        for s in ['flap', 'medicine', 'button', 'chirp', 'thump']:
+                            if s in self.sounds and self.sounds[s]:
+                                try:
+                                    self.sounds[s].set_volume(self.sfx_volume * self.master_volume)
+                                except Exception:
+                                    pass
+                    except Exception:
+                        pass
+                    # persist
+                    try:
+                        import json as _json
+                        with open(self._settings_path, 'w') as _f:
+                            _json.dump({'master_volume': self.master_volume, 'music_volume': self.music_volume, 'sfx_volume': self.sfx_volume}, _f)
+                    except Exception:
+                        pass
+                    return
+        except Exception:
+            pass
     
     def run(self):
         """Main game loop."""
@@ -1340,7 +1891,78 @@ class MangoTamagotchi:
                 elif event.type == pygame.MOUSEBUTTONDOWN:
                     if event.button == 1:  # Left click
                         self.handle_click(event.pos)
+                elif event.type == pygame.MOUSEMOTION:
+                    try:
+                        mx, my = event.pos
+                        for key, meta in self._audio_sliders.items():
+                            if meta.get('dragging') and meta.get('rect'):
+                                r = meta['rect']
+                                rel = (mx - r.x) / float(r.w)
+                                val = max(0.0, min(1.0, rel))
+                                if key == 'master':
+                                    self.master_volume = val
+                                elif key == 'music':
+                                    self.music_volume = val
+                                elif key == 'sfx':
+                                    self.sfx_volume = val
+                                # apply volumes live
+                                try:
+                                    pygame.mixer.music.set_volume(self.music_volume * self.master_volume)
+                                except Exception:
+                                    pass
+                                try:
+                                    for s in ['flap', 'medicine', 'button', 'chirp', 'thump']:
+                                        if s in self.sounds and self.sounds[s]:
+                                            try:
+                                                self.sounds[s].set_volume(self.sfx_volume * self.master_volume)
+                                            except Exception:
+                                                pass
+                                except Exception:
+                                    pass
+                    except Exception:
+                        pass
+                elif event.type == pygame.MOUSEBUTTONUP:
+                    try:
+                        if event.button == 1:
+                            # stop any dragging and persist settings
+                            changed = False
+                            for key, meta in self._audio_sliders.items():
+                                if meta.get('dragging'):
+                                    meta['dragging'] = False
+                                    changed = True
+                            if changed:
+                                import json as _json
+                                with open(self._settings_path, 'w') as _f:
+                                    _json.dump({'master_volume': self.master_volume, 'music_volume': self.music_volume, 'sfx_volume': self.sfx_volume}, _f)
+                    except Exception:
+                        pass
                 elif event.type == pygame.KEYDOWN:
+                    # Developer audio self-test: press T in the hub to play all SFX/music
+                    if event.key == pygame.K_t and self.state == GameState.TAMAGOTCHI_HUB:
+                        try:
+                            print("Audio self-test: playing flap, button, medicine, chirp, starting/stopping music...")
+                            if 'flap' in self.sounds:
+                                self._play_sfx('flap')
+                                pygame.time.delay(300)
+                            if 'button' in self.sounds:
+                                self._play_sfx('button')
+                                pygame.time.delay(300)
+                            if 'medicine' in self.sounds:
+                                self._play_sfx('medicine')
+                                pygame.time.delay(400)
+                            if 'chirp' in self.sounds:
+                                self._play_sfx('chirp')
+                                pygame.time.delay(300)
+                            # Play home music briefly then switch to forest
+                            self._play_music('home')
+                            pygame.time.delay(800)
+                            self._play_music('forest')
+                            pygame.time.delay(800)
+                            self._stop_music()
+                            print("Audio self-test complete.")
+                        except Exception as e:
+                            print(f"Audio self-test failed: {e}")
+                        continue
                     if event.key == pygame.K_ESCAPE:
                         running = False
             

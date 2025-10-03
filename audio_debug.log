@@ -1,0 +1,1062 @@
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12147f750> (set_vol=0.254 read_vol=0.25)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav; channel=<pygame.mixer.Channel object at 0x12147f9f0>, set_volume=0.18242715920915714, channel_volume=0.1796875
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.182)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=1.000 read_vol=1.0)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=1.000 read_vol=1.0)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=1.000 read_vol=1.0)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=1.000 read_vol=1.0)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=1.000 read_vol=1.0)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x12147f770> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12147f750> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x1027fb490> (set_vol=0.318 read_vol=0.3125)
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x12147f770> (set_vol=0.254 read_vol=0.25)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1179af750> (set_vol=0.254 read_vol=0.25)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav; channel=<pygame.mixer.Channel object at 0x1179af9f0>, set_volume=0.18242715920915714, channel_volume=0.1796875
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.182)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x102cb0490> (set_vol=1.000 read_vol=1.0)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x102cb0490> (set_vol=1.000 read_vol=1.0)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x102cb0490> (set_vol=1.000 read_vol=1.0)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x102cb0490> (set_vol=1.000 read_vol=1.0)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x102cb0490> (set_vol=0.318 read_vol=0.3125)
+[audio-debug] played debug tone on <pygame.mixer.Channel object at 0x1179afc10> freq=1200 dur=300ms vol=1.0
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x1179af770> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1179af750> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'flap' on channel <pygame.mixer.Channel object at 0x102cb0490> (set_vol=0.318 read_vol=0.3125)
+[audio-debug] played debug tone on <pygame.mixer.Channel object at 0x1179af630> freq=1200 dur=300ms vol=1.0
+[audio-debug] played debug tone on <pygame.mixer.Channel object at 0x1179afcb0> freq=1200 dur=300ms vol=1.0
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x1179af770> (set_vol=0.254 read_vol=0.25)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11729d8d0> (set_vol=0.254 read_vol=0.25)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav; channel=<pygame.mixer.Channel object at 0x11729db70>, set_volume=0.18242715920915714, channel_volume=0.1796875
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.182)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729db30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729dd10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729db50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729dbf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729dc70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729de70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729da50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729de10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729dbb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729de70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729dcf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729de90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729ddf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11729dbf0>
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11729d8f0> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11729d8d0> (set_vol=0.254 read_vol=0.25)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12240d9b0> (set_vol=0.254 read_vol=0.25)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav; channel=<pygame.mixer.Channel object at 0x12240db90>, set_volume=0.18242715920915714, channel_volume=0.1796875
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.182)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240dcb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240dd30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240d910>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240d8d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240dab0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240ded0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240d9f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240dd10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240dbf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240def0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240dd30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240d910>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240def0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240dc10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12240df30>
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x12240d9b0> (set_vol=0.254 read_vol=0.25)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11cdb98d0> (set_vol=0.254 read_vol=0.25)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav; channel=<pygame.mixer.Channel object at 0x11cdb9a50>, set_volume=0.18242715920915714, channel_volume=0.1796875
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.182)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9c90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9d10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9b70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9c50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9a90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9e90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9d10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9c90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb99b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11cdb9ef0>
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11cdb98f0> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11cdb98d0> (set_vol=0.254 read_vol=0.25)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11bc62990> (set_vol=0.254 read_vol=0.25)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav; channel=<pygame.mixer.Channel object at 0x11bc629d0>, set_volume=0.18242715920915714, channel_volume=0.1796875
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.182)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62d30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62d70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc629f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62bd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62c50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62f30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62d70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62cb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62ed0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62f70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62d30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62cb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62e50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62ab0>
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11bc629b0> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11bc62990> (set_vol=0.254 read_vol=0.25)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62e70>
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11bc629b0> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11bc62990> (set_vol=0.254 read_vol=0.25)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62d30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62d50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62e30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62d30>
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11bc629b0> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11bc62990> (set_vol=0.254 read_vol=0.25)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62d50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62ed0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62e30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62c10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62c30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62bd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11bc62eb0>
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11bc629b0> (set_vol=0.254 read_vol=0.25)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x126e929b0> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x126e929b0> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav; channel=<pygame.mixer.Channel object at 0x126e929d0>, set_volume=0.18242715920915714, channel_volume=0.1796875
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.182)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92b10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92db0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92bd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92c10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92af0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92db0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92af0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92c10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92db0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92fb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92af0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ed0>
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x126e929b0> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92df0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92b10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92db0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92c30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92bd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92db0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e929f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ab0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92b10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ed0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e929f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ed0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92bd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92af0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92c30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92db0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92fd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92c10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92bd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92870>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e929f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92fd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ed0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92b30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92df0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92af0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92b30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e929f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92c30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92bd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92b30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92c10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92fd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92bd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92fd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92af0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e929f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ed0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92b10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92bd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92db0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ed0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92c10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92870>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ed0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92df0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92b30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92870>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92df0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92fb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92ed0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e929f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92bd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92d50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e929f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92870>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92fd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92b10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92fb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92fd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92e30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x126e92f10>
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x126e929b0> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x126e92a90> (set_vol=0.254 read_vol=0.25)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x126e92990> (set_vol=0.254 read_vol=0.25)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11753e990> (set_vol=0.254 read_vol=0.25)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav; channel=<pygame.mixer.Channel object at 0x11753e9d0>, set_volume=0.18242715920915714, channel_volume=0.1796875
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.182)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ed30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ed70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ecd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753eb30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ec50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ef10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ed70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ec50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753e9f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ef30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ed70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753e870>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ee30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ec90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ef50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ef70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ecd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11753ed50>
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11753e990> (set_vol=0.254 read_vol=0.25)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x112d2f990> (set_vol=0.254 read_vol=0.25)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav; channel=<pygame.mixer.Channel object at 0x112d2f9d0>, set_volume=0.18242715920915714, channel_volume=0.1796875
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.182)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fd30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fd50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fb70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fd50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fb70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fb70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fd10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fb90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fed0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2ff30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fbd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2ff10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fbd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2ff30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fb70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2ff30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fb70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x112d2fcb0>
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x112d2f9b0> (set_vol=0.254 read_vol=0.25)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647cc10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647cb10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647cc50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647cd30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647ced0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647cb10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647cd30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647cb10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647cc50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647cb10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647ced0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647cc50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x14647cb10>
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.182)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc790>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccab0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc770>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc6d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc850>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc790>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc970>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc930>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc6d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccccb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc8d0>
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.182)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccf70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc7d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc9b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc8d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc3d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccab0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc7d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc610>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc8d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccccb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc850>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc7b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccca30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccf50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccceb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc650>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccceb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccf70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccca30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc7d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc850>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc9b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc790>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc3d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc610>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc6d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc7d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccf50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc7d0>
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.182)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.057)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc650>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccf70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc9b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccca30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc7b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccf50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccf70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccad0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccdf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc7d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc8d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccad0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccf70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccce30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124cccad0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccc850>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x124ccceb0>
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.057)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.057)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.057)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.600)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4a90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d41d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4d10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d47b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4df0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4a90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4c30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4950>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d45d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4170>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4a90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d41d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4df0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d41d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4b30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d43d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4950>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76cd90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4610>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4b30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d47b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4950>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4790>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4610>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4770>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4610>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4a90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d45b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4c30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4a10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4650>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4a90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d46f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d46f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d41d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4e30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d45d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4030>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ccd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d49b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4a90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d47d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4770>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d41d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4b30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4a90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4850>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4b30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4090>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4170>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d43d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d49b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4a90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d46f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4030>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d45d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4170>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d46f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d45b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d43d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d46f0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d49b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d45d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4b30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4770>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d48d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4e30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4030>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d45d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d47d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4090>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4950>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d41d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4090>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4b30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4670>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d47d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4090>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4950>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d47b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4650>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4f10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4e30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d4cf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a76ce50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x12a7d47d0>
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.057)
+[audio] load_sounds: loaded keys=[]
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.057)
+[audio] _play_sfx: attempt to play key='medicine'
+[audio] _play_sfx: played 'medicine' on channel <pygame.mixer.Channel object at 0x11ff49b10> (set_vol=0.059 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x1073949b0> (set_vol=0.059 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11ff49f50> (set_vol=0.059 read_vol=1.0)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.057)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49f50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49d30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49f50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49d30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49d30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49f50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49d30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ffb1a30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49f50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49d30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49f50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49d30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49f50>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49d30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ff49cd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11ffb16f0>
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11ff49d30> (set_vol=0.059 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11ff49f50> (set_vol=0.059 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.057)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b831f90> (set_vol=0.810 read_vol=1.0)
+[audio] fallback Sound.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831f30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831f90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831f30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831f90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831f30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831f30>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b886090>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b886230>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b8861b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11b8860b0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b886070> (set_vol=0.810 read_vol=1.0)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b886210>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b886190>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b886130>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831eb0>
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11b8860d0> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b831ef0> (set_vol=0.810 read_vol=1.0)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b8861b0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b886190>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b8860d0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b886290>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b886070>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b886330>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831e70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b831ef0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b886130>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b886350>
+[audio] _play_sfx: attempt to play key='thump'
+[audio] _play_sfx: played 'thump' on channel <pygame.mixer.Channel object at 0x11b831e70> (set_vol=0.810 read_vol=1.0)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b831ef0> (set_vol=0.810 read_vol=0.8046875)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b831eb0> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b94def0> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94df10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94ddf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94dfd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94dfd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94dfd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de90>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94df10>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94ddf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94dfd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94ddf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94dfd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94ddf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94dfd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94dfd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94ddf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94de70>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94ddf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94dfd0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94ddf0>
+[audio] forced short flap debug played on <pygame.mixer.Channel object at 0x11b94dfd0>
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11b98e270> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x118f7cf70> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x118f7cdf0> (set_vol=0.900 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.600)
+[audio] load_sounds: loaded keys=['button', 'chirp', 'flap', 'medicine', 'thump']
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11c14df70> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for forest -> assets/sounds/forest.wav (vol=0.540)
+[audio] _play_sfx: attempt to play key='button'
+[audio] _play_sfx: played 'button' on channel <pygame.mixer.Channel object at 0x11c14dfd0> (set_vol=0.810 read_vol=1.0)
+[audio] music.play() started for home -> assets/sounds/home.wav (vol=0.540)
