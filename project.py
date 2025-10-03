@@ -425,7 +425,7 @@ class MangoTamagotchi:
     def load_mango_sprites(self):
         """Load Mango sprite images."""
         self.mango_sprites = {}
-        
+
         sprite_files = {
             'idle': 'mango_idle.png',
             'happy': 'mango_happy.png',
@@ -434,16 +434,55 @@ class MangoTamagotchi:
             'dirty': 'mango_dirty.png',
             'flying': 'mango_flying.png',
         }
-        
+
+        # Helper: load and convert image to a pygame surface with alpha
+        def load_and_prepare(path, size=(100, 100)):
+            try:
+                # Use PIL for reliable alpha cropping and resizing
+                img = Image.open(path).convert('RGBA')
+
+                # Trim fully-transparent borders if present
+                bbox = img.split()[-1].getbbox()
+                if bbox:
+                    img = img.crop(bbox)
+
+                # Resize preserving aspect into a square canvas
+                img.thumbnail(size, Image.LANCZOS)
+                canvas = Image.new('RGBA', size, (0, 0, 0, 0))
+                x = (size[0] - img.width) // 2
+                y = (size[1] - img.height) // 2
+                canvas.paste(img, (x, y), img)
+
+                # Boost alpha if the sprite is accidentally faint
+                try:
+                    alpha = canvas.split()[-1]
+                    # Compute quick average alpha
+                    avg = sum(alpha.getdata()) / (size[0] * size[1])
+                    if avg < 60:
+                        # Increase alpha multiplicatively (clamped)
+                        def boost(a):
+                            return min(255, int(a * 1.6))
+                        alpha = alpha.point(boost)
+                        canvas.putalpha(alpha)
+                except Exception:
+                    pass
+
+                data = canvas.tobytes()
+                surf = pygame.image.fromstring(data, size, 'RGBA')
+                return surf.convert_alpha()
+            except Exception:
+                # Fall back to pygame loader
+                try:
+                    s = pygame.image.load(path).convert_alpha()
+                    return pygame.transform.smoothscale(s, size)
+                except Exception:
+                    return None
+
         for mood, filename in sprite_files.items():
             try:
                 sprite_path = f"assets/sprites/{filename}"
                 if os.path.exists(sprite_path):
-                    sprite = pygame.image.load(sprite_path)
-                    # Convert to RGBA to handle transparency properly
-                    sprite = sprite.convert_alpha()
-                    # Scale sprite to larger size (100x100 pixels for hub)
-                    self.mango_sprites[mood] = pygame.transform.scale(sprite, (100, 100))
+                    self.mango_sprites[mood] = load_and_prepare(sprite_path, (100, 100))
                     print(f"Loaded sprite: {filename}")
                 else:
                     self.mango_sprites[mood] = None
@@ -452,16 +491,17 @@ class MangoTamagotchi:
                 self.mango_sprites[mood] = None
                 print(f"Error loading sprite {filename}: {e}")
 
-        # Try to load an alternate flying sprite for smoother flapping animation
+        # Process alternate flying sprite specially for flappy game
+        flying2_path = "assets/sprites/mango_flying2.png"
         try:
-            flying2_path = "assets/sprites/mango_flying2.png"
             if os.path.exists(flying2_path):
-                sprite2 = pygame.image.load(flying2_path)
-                sprite2 = sprite2.convert_alpha()
-                self.mango_sprites['flying2'] = pygame.transform.scale(sprite2, (100, 100))
-                print("Loaded sprite: mango_flying2.png")
+                s2 = load_and_prepare(flying2_path, (100, 100))
+                if s2:
+                    self.mango_sprites['flying2'] = s2
+                    print("Loaded sprite: mango_flying2.png (processed)")
+                else:
+                    self.mango_sprites['flying2'] = self.mango_sprites.get('flying')
             else:
-                # Fallback: duplicate the main flying sprite if alternate not provided
                 self.mango_sprites['flying2'] = self.mango_sprites.get('flying')
         except Exception as e:
             self.mango_sprites['flying2'] = self.mango_sprites.get('flying')
@@ -842,8 +882,11 @@ class MangoTamagotchi:
 
             # Mango shadow (reduced so it doesn't look like a black ball on his back)
             try:
-                shadow_radius = 10
-                pygame.draw.circle(self.screen, (0, 0, 0, 50), (int(mango_x + 2), int(mango_y + 8)), shadow_radius)
+                # Softer, wider shadow with low alpha so it doesn't form a black blob
+                shadow_surf = pygame.Surface((60, 30), pygame.SRCALPHA)
+                pygame.draw.ellipse(shadow_surf, (0, 0, 0, 40), shadow_surf.get_rect())
+                shadow_rect = shadow_surf.get_rect(center=(int(mango_x + 4), int(mango_y + 14)))
+                self.screen.blit(shadow_surf, shadow_rect)
             except Exception:
                 pass
 
@@ -858,24 +901,53 @@ class MangoTamagotchi:
                 # Handle crossfade progress if present
                 if hasattr(self, '_flap_fade') and flappy_sprite2:
                     fade = self._flap_fade
-                    # progress moves from 0.0 to 1.0 over ~6 frames (~100ms at 60fps)
-                    fade['progress'] = min(1.0, fade.get('progress', 0.0) + 0.17)
+                    # Slightly slower crossfade for a smoother, less jarring look
+                    fade['progress'] = min(1.0, fade.get('progress', 0.0) + 0.12)
                     alpha2 = int(255 * fade['progress'])
                     alpha1 = 255 - alpha2
 
-                    # Create surfaces with per-surface alpha for blending
-                    surf1 = flappy_sprite1.copy() if flappy_sprite1 else None
-                    surf2 = flappy_sprite2.copy() if flappy_sprite2 else None
-                    if surf1:
-                        surf1.set_alpha(alpha1)
-                    if surf2:
-                        surf2.set_alpha(alpha2)
+                    # Use a dedicated SRCALPHA surface to composite both sprites so
+                    # per-pixel alpha is respected and we avoid odd semi-transparent artifacts.
+                    try:
+                        size = (90, 90)
+                        blended = pygame.Surface(size, pygame.SRCALPHA)
 
-                    rect = surf1.get_rect(center=(int(mango_x), int(mango_y))) if surf1 else surf2.get_rect(center=(int(mango_x), int(mango_y)))
-                    if surf1:
-                        self.screen.blit(surf1, rect)
-                    if surf2:
-                        self.screen.blit(surf2, rect)
+                        # Before blending, do a quick alpha-quality check on sprite2
+                        use_blend = True
+                        try:
+                            # Sample alpha channel mean by converting to string buffer
+                            arr = pygame.surfarray.pixels_alpha(flappy_sprite2)
+                            avg_alpha = float(arr.mean()) if arr.size else 255.0
+                            # If flying2 is mostly transparent, avoid blending
+                            if avg_alpha < 40:
+                                use_blend = False
+                        except Exception:
+                            use_blend = True
+
+                        if use_blend:
+                            # Prepare temporary copies and apply per-surface alpha
+                            if flappy_sprite1:
+                                tmp1 = flappy_sprite1.copy()
+                                tmp1.set_alpha(alpha1)
+                                blended.blit(tmp1, (0, 0))
+                            if flappy_sprite2:
+                                tmp2 = flappy_sprite2.copy()
+                                tmp2.set_alpha(alpha2)
+                                blended.blit(tmp2, (0, 0))
+
+                            rect = blended.get_rect(center=(int(mango_x), int(mango_y)))
+                            self.screen.blit(blended, rect)
+                        else:
+                            # Fallback: prefer sprite1 so Mango appears solid
+                            sprite_rect = flappy_sprite1.get_rect(center=(int(mango_x), int(mango_y)))
+                            self.screen.blit(flappy_sprite1, sprite_rect)
+                    except Exception:
+                        # If anything goes wrong with blending, fallback to simple swap
+                        try:
+                            sprite_rect = flappy_sprite1.get_rect(center=(int(mango_x), int(mango_y)))
+                            self.screen.blit(flappy_sprite1, sprite_rect)
+                        except Exception:
+                            pass
 
                     # Reset fade if finished so next SPACE restarts it
                     if fade['progress'] >= 1.0:
