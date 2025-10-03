@@ -39,3 +39,9 @@ build/web.zip
 
 # Database
 db/*.db
+# Local artifacts
+*.zip
+*.log
+build/
+.web-cache/
+.web/
