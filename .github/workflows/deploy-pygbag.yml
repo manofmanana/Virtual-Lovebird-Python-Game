@@ -20,15 +20,22 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt || true
-          pip install pygbag
 
       - name: Build web bundle with pygbag
-        # Try a couple of pygbag invocation styles to be resilient across versions
         run: |
           set -e
-          python -m pygbag build project.py web || true
-          python -m pygbag project.py web || true
-          pygbag project.py web || true
+          # Build the app by pointing pygbag at the app directory that contains main.py
+          python -m pygbag web 2>&1 | tee pygbag_build.log || true
+
+      - name: Validate build output
+        run: |
+          echo "Checking for web/index.html"
+          if [ ! -f web/index.html ]; then
+            echo "pygbag build failed - web/index.html not found"
+            echo "----- pygbag_build.log -----"
+            sed -n '1,240p' pygbag_build.log || true
+            exit 1
+          fi
 
       - name: Copy assets to web bundle (ensures images/sounds are available)
         run: |
