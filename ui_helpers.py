@@ -3,7 +3,16 @@
 These are small, stateless drawing utilities that operate on a game
 instance (providing screen, fonts, etc.).
 """
-import pygame
+try:
+    import pygame
+except Exception:
+    # Allow importing this module in environments without pygame (tests, packaging)
+    pygame = None
+
+# Simple availability flag so callers / tests can import this module even when
+# pygame is not present. The draw helpers below become no-ops when pygame is
+# unavailable which avoids raising on import or during headless tests.
+PYGAME_AVAILABLE = pygame is not None
 
 
 def draw_modern_button(game, rect, text, color, hover_color, text_color=(255,255,255), hover=False):
@@ -13,6 +22,10 @@ def draw_modern_button(game, rect, text, color, hover_color, text_color=(255,255
     instance so it can be called from other modules without introducing
     circular imports.
     """
+    # If pygame isn't available, behave as a safe no-op and return the rect.
+    if not PYGAME_AVAILABLE:
+        return rect
+
     # Button shadow
     shadow_rect = rect.copy()
     shadow_rect.x += 3
