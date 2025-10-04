@@ -87,9 +87,15 @@ except Exception:
 
 class MangoTamagotchi:
     def __init__(self):
-        self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+        # Create the real display surface and a fixed-size logical surface
+        self._display_screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
         pygame.display.set_caption("Mango: The Virtual Lovebird v2.0")
+        # `screen` is the logical surface used by rendering code (keeps layouts consistent)
+        self.screen = pygame.Surface((SCREEN_WIDTH, SCREEN_HEIGHT))
         self.clock = pygame.time.Clock()
+        # Fullscreen tracking: starts windowed, can be toggled at runtime
+        self.fullscreen = False
+        self._windowed_size = (SCREEN_WIDTH, SCREEN_HEIGHT)
         
         # Modern fonts
         try:
@@ -815,15 +821,55 @@ class MangoTamagotchi:
         running = True
         
         while running:
+            # Compute logical mouse position from display coords for scaled rendering
+            try:
+                disp = getattr(self, '_display_screen', None)
+                disp_w, disp_h = disp.get_size() if disp else (self.screen.get_width(), self.screen.get_height())
+            except Exception:
+                disp_w, disp_h = (self.screen.get_width(), self.screen.get_height())
+            try:
+                logical_w, logical_h = self.screen.get_size()
+            except Exception:
+                logical_w, logical_h = (SCREEN_WIDTH, SCREEN_HEIGHT)
+
+            # store logical mouse pos on the game instance for UI modules to use
+            try:
+                mx_disp, my_disp = pygame.mouse.get_pos()
+                if disp_w and disp_h:
+                    mx_log = int(mx_disp * logical_w / float(disp_w))
+                    my_log = int(my_disp * logical_h / float(disp_h))
+                else:
+                    mx_log, my_log = mx_disp, my_disp
+                self._mouse_pos_logical = (mx_log, my_log)
+            except Exception:
+                self._mouse_pos_logical = pygame.mouse.get_pos()
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
                 elif event.type == pygame.MOUSEBUTTONDOWN:
                     if event.button == 1:  # Left click
-                        self.handle_click(event.pos)
+                        # map display coords to logical coords before handling
+                        try:
+                            px, py = event.pos
+                            if disp_w and disp_h:
+                                lx = int(px * logical_w / float(disp_w))
+                                ly = int(py * logical_h / float(disp_h))
+                            else:
+                                lx, ly = px, py
+                            self.handle_click((lx, ly))
+                        except Exception:
+                            self.handle_click(event.pos)
                 elif event.type == pygame.MOUSEMOTION:
                     try:
                         mx, my = event.pos
+                        # convert to logical coords for slider dragging
+                        try:
+                            if disp_w and disp_h:
+                                mx = int(mx * logical_w / float(disp_w))
+                                my = int(my * logical_h / float(disp_h))
+                        except Exception:
+                            pass
                         for key, meta in self._audio_sliders.items():
                             if meta.get('dragging') and meta.get('rect'):
                                 r = meta['rect']
@@ -867,6 +913,16 @@ class MangoTamagotchi:
                     except Exception:
                         pass
                 elif event.type == pygame.KEYDOWN:
+                    # Fullscreen toggles: F11 or Alt+Enter
+                    try:
+                        if event.key == pygame.K_F11:
+                            self.toggle_fullscreen()
+                            continue
+                        if event.key == pygame.K_RETURN and (event.mod & pygame.KMOD_ALT):
+                            self.toggle_fullscreen()
+                            continue
+                    except Exception:
+                        pass
                     # Developer audio self-test: press T in the hub to play all SFX/music
                     if event.key == pygame.K_t and self.state == GameState.TAMAGOTCHI_HUB:
                         try:
@@ -920,7 +976,24 @@ class MangoTamagotchi:
             elif self.state == GameState.GAME_OVER:
                 self.draw_game_over_screen()
             
-            pygame.display.flip()
+            # Scale logical `self.screen` to the actual display and flip.
+            try:
+                disp = getattr(self, '_display_screen', None)
+                if disp is not None:
+                    # Smooth scale for nicer visuals when stretching
+                    try:
+                        scaled = pygame.transform.smoothscale(self.screen, disp.get_size())
+                    except Exception:
+                        scaled = pygame.transform.scale(self.screen, disp.get_size())
+                    disp.blit(scaled, (0, 0))
+                    pygame.display.flip()
+                else:
+                    pygame.display.flip()
+            except Exception:
+                try:
+                    pygame.display.flip()
+                except Exception:
+                    pass
             self.clock.tick(FPS)
         
         pygame.quit()
@@ -930,6 +1003,273 @@ class MangoTamagotchi:
         """Delegate the game-over screen drawing to hub_ui.draw_game_over_screen."""
         from hub_ui import draw_game_over_screen as _dg
         return _dg(self)
+
+    def toggle_fullscreen(self):
+        """Toggle fullscreen mode. Uses the display's current resolution for fullscreen.
+
+        We reset the display surface and keep `self.screen` referencing the new surface
+        so the rest of the code continues to use the correct size via `screen.get_width()`.
+        """
+        try:
+            # Smooth fade transition: fade out, change mode, fade in
+            disp = getattr(self, '_display_screen', None)
+            try:
+                start_size = disp.get_size() if disp else (self._windowed_size[0], self._windowed_size[1])
+            except Exception:
+                start_size = (self._windowed_size[0], self._windowed_size[1])
+
+            enter_fs = not getattr(self, 'fullscreen', False)
+
+            # Prepare fade parameters
+            steps = 10
+            delay_ms = 16  # ~60fps animation steps
+
+            # Fade out to black
+            try:
+                for i in range(steps):
+                    alpha = int(255 * (i + 1) / float(steps))
+                    try:
+                        if disp is not None:
+                            # draw current logical screen scaled to current display
+                            try:
+                                scaled = pygame.transform.smoothscale(self.screen, disp.get_size())
+                            except Exception:
+                                scaled = pygame.transform.scale(self.screen, disp.get_size())
+                            disp.blit(scaled, (0, 0))
+                        # overlay
+                        overlay = pygame.Surface(start_size, pygame.SRCALPHA)
+                        overlay.fill((0, 0, 0, alpha))
+                        if disp is not None:
+                            try:
+                                disp.blit(overlay, (0, 0))
+                            except Exception:
+                                pass
+                            pygame.display.flip()
+                        else:
+                            try:
+                                pygame.display.flip()
+                            except Exception:
+                                pass
+                    except Exception:
+                        pass
+                    try:
+                        pygame.time.delay(delay_ms)
+                    except Exception:
+                        pass
+            except Exception:
+                pass
+
+            # Change display mode while screen is black
+            if enter_fs:
+                info = pygame.display.Info()
+                w, h = info.current_w or self._windowed_size[0], info.current_h or self._windowed_size[1]
+                flags = 0
+                try:
+                    flags = pygame.FULLSCREEN | getattr(pygame, 'SCALED', 0)
+                except Exception:
+                    flags = pygame.FULLSCREEN
+                try:
+                    self._display_screen = pygame.display.set_mode((w, h), flags)
+                except Exception:
+                    self._display_screen = pygame.display.set_mode((w, h), pygame.FULLSCREEN)
+                self.fullscreen = True
+            else:
+                try:
+                    self._display_screen = pygame.display.set_mode(tuple(self._windowed_size))
+                except Exception:
+                    self._display_screen = pygame.display.set_mode((self._windowed_size[0], self._windowed_size[1]))
+                self.fullscreen = False
+
+            # Fade in from black on the new display
+            disp = getattr(self, '_display_screen', None)
+            try:
+                end_size = disp.get_size() if disp else start_size
+            except Exception:
+                end_size = start_size
+            try:
+                for i in range(steps):
+                    alpha = int(255 * (1.0 - (i + 1) / float(steps)))
+                    try:
+                        if disp is not None:
+                            try:
+                                scaled = pygame.transform.smoothscale(self.screen, disp.get_size())
+                            except Exception:
+                                scaled = pygame.transform.scale(self.screen, disp.get_size())
+                            disp.blit(scaled, (0, 0))
+                        overlay = pygame.Surface(end_size, pygame.SRCALPHA)
+                        overlay.fill((0, 0, 0, alpha))
+                        if disp is not None:
+                            try:
+                                disp.blit(overlay, (0, 0))
+                            except Exception:
+                                pass
+                            pygame.display.flip()
+                        else:
+                            try:
+                                pygame.display.flip()
+                            except Exception:
+                                pass
+                    except Exception:
+                        pass
+                    try:
+                        pygame.time.delay(delay_ms)
+                    except Exception:
+                        pass
+            except Exception:
+                pass
+
+        except Exception:
+            # Best-effort only; don't raise to avoid crashing the game loop
+            try:
+                pygame.display.toggle_fullscreen()
+                self.fullscreen = not getattr(self, 'fullscreen', False)
+            except Exception:
+                pass
+
+    def fade_out(self, steps=12, delay_ms=16):
+        """Fade the current logical screen out to black on the display."""
+        try:
+            disp = getattr(self, '_display_screen', None)
+            try:
+                size = disp.get_size() if disp else (self.screen.get_width(), self.screen.get_height())
+            except Exception:
+                size = (self.screen.get_width(), self.screen.get_height())
+
+            # Render the current logical screen once to the display, then overlay
+            try:
+                if disp is not None:
+                    try:
+                        scaled = pygame.transform.smoothscale(self.screen, disp.get_size())
+                    except Exception:
+                        scaled = pygame.transform.scale(self.screen, disp.get_size())
+                    disp.blit(scaled, (0, 0))
+                else:
+                    # attempt to update display from logical surface as best-effort
+                    try:
+                        scaled = pygame.transform.smoothscale(self.screen, size)
+                        pygame.display.get_surface().blit(scaled, (0, 0))
+                    except Exception:
+                        pass
+                pygame.display.flip()
+            except Exception:
+                pass
+
+            for i in range(steps):
+                alpha = int(255 * (i + 1) / float(steps))
+                try:
+                    overlay = pygame.Surface(size, pygame.SRCALPHA)
+                    overlay.fill((0, 0, 0, alpha))
+                    if disp is not None:
+                        try:
+                            disp.blit(overlay, (0, 0))
+                        except Exception:
+                            pass
+                        pygame.display.flip()
+                    else:
+                        try:
+                            pygame.display.flip()
+                        except Exception:
+                            pass
+                except Exception:
+                    pass
+                try:
+                    pygame.time.delay(delay_ms)
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
+    def fade_in(self, steps=12, delay_ms=16):
+        """Fade from black into the current logical screen on the display."""
+        try:
+            disp = getattr(self, '_display_screen', None)
+            try:
+                size = disp.get_size() if disp else (self.screen.get_width(), self.screen.get_height())
+            except Exception:
+                size = (self.screen.get_width(), self.screen.get_height())
+
+            # Start from a full-black screen then reveal the logical screen
+            try:
+                if disp is not None:
+                    disp.fill((0, 0, 0))
+                else:
+                    try:
+                        pygame.display.get_surface().fill((0, 0, 0))
+                    except Exception:
+                        pass
+                pygame.display.flip()
+            except Exception:
+                pass
+
+            # Pre-render scaled content once
+            try:
+                if disp is not None:
+                    try:
+                        scaled = pygame.transform.smoothscale(self.screen, disp.get_size())
+                    except Exception:
+                        scaled = pygame.transform.scale(self.screen, disp.get_size())
+                else:
+                    try:
+                        scaled = pygame.transform.smoothscale(self.screen, size)
+                    except Exception:
+                        scaled = None
+            except Exception:
+                scaled = None
+
+            for i in range(steps):
+                alpha = int(255 * (1.0 - (i + 1) / float(steps)))
+                try:
+                    if disp is not None and scaled is not None:
+                        disp.blit(scaled, (0, 0))
+                    elif scaled is not None:
+                        try:
+                            pygame.display.get_surface().blit(scaled, (0, 0))
+                        except Exception:
+                            pass
+                    overlay = pygame.Surface(size, pygame.SRCALPHA)
+                    overlay.fill((0, 0, 0, alpha))
+                    if disp is not None:
+                        try:
+                            disp.blit(overlay, (0, 0))
+                        except Exception:
+                            pass
+                        pygame.display.flip()
+                    else:
+                        try:
+                            pygame.display.flip()
+                        except Exception:
+                            pass
+                except Exception:
+                    pass
+                try:
+                    pygame.time.delay(delay_ms)
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
+    def present(self):
+        """Scale the logical surface to the display and flip the buffer.
+
+        Mini-games should call this instead of pygame.display.flip() so
+        presentation is consistent whether windowed or fullscreen.
+        """
+        try:
+            disp = getattr(self, '_display_screen', None)
+            if disp is not None:
+                try:
+                    scaled = pygame.transform.smoothscale(self.screen, disp.get_size())
+                except Exception:
+                    scaled = pygame.transform.scale(self.screen, disp.get_size())
+                disp.blit(scaled, (0, 0))
+                pygame.display.flip()
+                return
+        except Exception:
+            pass
+        try:
+            pygame.display.flip()
+        except Exception:
+            pass
 
 def main():
     """Main function to run the game."""

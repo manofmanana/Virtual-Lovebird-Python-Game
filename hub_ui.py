@@ -155,7 +155,7 @@ def draw_home_screen(game):
         ("Play", game.play_with_mango, getattr(game, 'YELLOW', (255,193,7)), (200,150,0)),
         ("Rest", game.rest_mango, getattr(game, 'PINK', (233,30,99)), (200,100,150)),
         ("Medicine", game.give_medicine, getattr(game, 'RED', (244,67,54)), (200,0,0)),
-        ("Discipline", game.discipline, getattr(game, 'PURPLE', (156,39,176)), (100,0,100)),
+        ("Tickle", game.discipline, getattr(game, 'PURPLE', (156,39,176)), (100,0,100)),
     ]
 
     left_buttons = all_buttons[:3]
@@ -167,7 +167,11 @@ def draw_home_screen(game):
     stack_height = 3 * button_height + 2 * v_spacing
     stack_start_y = cage_y + (cage_height - stack_height) // 2
 
-    mouse_pos = pygame.mouse.get_pos()
+    # Use logical mouse position (set by project.run) when available so
+    # hover/click detection is correct after scaling to fullscreen.
+    mouse_pos = getattr(game, '_mouse_pos_logical', None)
+    if not mouse_pos:
+        mouse_pos = pygame.mouse.get_pos()
     game._hub_button_rects = []
 
     for i, (text, action, color, hover_color) in enumerate(left_buttons):
@@ -200,6 +204,27 @@ def draw_home_screen(game):
             _dmb(game, flappy_rect, "Flappy Mango", getattr(game, 'ORANGE', (255,152,0)), getattr(game, 'GOLD', (255,215,0)), (255,255,255), flappy_rect.collidepoint(mouse_pos))
         except Exception:
             pass
+
+    # Fullscreen toggle button (smaller, top-right corner)
+    try:
+        fs_w, fs_h = 28, 22
+        fs_x = screen_w - fs_w - 10
+        fs_y = 10
+        fs_rect = pygame.Rect(fs_x, fs_y, fs_w, fs_h)
+        game._fullscreen_button_rect = fs_rect
+        # Draw compact icon/button
+        pygame.draw.rect(game.screen, (30, 30, 30), fs_rect, border_radius=6)
+        pygame.draw.rect(game.screen, (255,255,255), fs_rect, 1, border_radius=6)
+        try:
+            # small inward-corner marks to indicate fullscreen
+            pygame.draw.line(game.screen, (255,255,255), (fs_rect.left+4, fs_rect.top+8), (fs_rect.left+4, fs_rect.top+4))
+            pygame.draw.line(game.screen, (255,255,255), (fs_rect.left+4, fs_rect.top+4), (fs_rect.left+8, fs_rect.top+4))
+            pygame.draw.line(game.screen, (255,255,255), (fs_rect.right-4, fs_rect.bottom-8), (fs_rect.right-4, fs_rect.bottom-4))
+            pygame.draw.line(game.screen, (255,255,255), (fs_rect.right-4, fs_rect.bottom-4), (fs_rect.right-8, fs_rect.bottom-4))
+        except Exception:
+            pass
+    except Exception:
+        pass
 
     # Stats panel: centered below cage and moved slightly higher (10px)
     try:
@@ -375,6 +400,19 @@ def handle_click(game, pos):
             if rect.collidepoint(pos):
                 try:
                     if callable(action):
+                        # If action is a mini-game launcher (convention: name starts with 'play_'),
+                        # perform a fade_out from the hub before entering so the transition is smooth.
+                        try:
+                            aname = getattr(action, '__name__', '')
+                            # Only trigger a pre-launch fade when the player clicked the
+                            # Feed button (so the hub fades to black before entering Feed).
+                            if aname == 'play_feed_minigame' and hasattr(game, 'fade_out'):
+                                try:
+                                    game.fade_out()
+                                except Exception:
+                                    pass
+                        except Exception:
+                            pass
                         ok = action()
                         # play button sound and show HUD message on success
                         try:
@@ -417,11 +455,32 @@ def handle_click(game, pos):
         flappy_rect = getattr(game, '_flappy_button_rect', None)
         if flappy_rect and flappy_rect.collidepoint(pos):
             try:
+                # Fade out from hub then start flappy mini-game for a smooth transition
+                try:
+                    if hasattr(game, 'fade_out'):
+                        try:
+                            game.fade_out()
+                        except Exception:
+                            pass
+                except Exception:
+                    pass
                 # Start flappy mini-game
                 game.play_flappy_mango()
             except Exception:
                 pass
             return
+
+        # Fullscreen button click
+        try:
+            fs = getattr(game, '_fullscreen_button_rect', None)
+            if fs and fs.collidepoint(pos):
+                try:
+                    game.toggle_fullscreen()
+                except Exception:
+                    pass
+                return
+        except Exception:
+            pass
 
         # Sliders interaction: detect clicks on the slider rects and set dragging
         try:

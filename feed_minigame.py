@@ -370,7 +370,13 @@ def play_feed_minigame(game, feed_state, exit_state):
                 except Exception:
                     pass
 
-            pygame.display.flip()
+            try:
+                game.present()
+            except Exception:
+                try:
+                    pygame.display.flip()
+                except Exception:
+                    pass
         except Exception:
             pass
 
@@ -397,6 +403,15 @@ def play_feed_minigame(game, feed_state, exit_state):
             try:
                 game._stop_music()
                 game._play_music('home')
+            except Exception:
+                pass
+            # Fade out back to hub and then set state
+            try:
+                if hasattr(game, 'fade_out'):
+                    try:
+                        game.fade_out()
+                    except Exception:
+                        pass
             except Exception:
                 pass
             game.state = exit_state

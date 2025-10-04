@@ -44,6 +44,27 @@ def play_flappy_mango(game, flappy_state, exit_state):
     except Exception:
         pass
 
+    # Draw and present an initial frame immediately so the UI updates
+    # before any audio or heavy initialization happens. This ensures the
+    # player sees the Flappy screen promptly (fixes fullscreen visual lag).
+    try:
+        game.draw_flappy_background()
+        try:
+            game.present()
+            # Fade in gently when entering the mini-game if supported
+            try:
+                if hasattr(game, 'fade_in'):
+                    game.fade_in()
+            except Exception:
+                pass
+        except Exception:
+            try:
+                pygame.display.flip()
+            except Exception:
+                pass
+    except Exception:
+        pass
+
     # Local helpers to access constants from the main module
     SCREEN_WIDTH = getattr(_project, 'SCREEN_WIDTH', game.screen.get_width())
     SCREEN_HEIGHT = getattr(_project, 'SCREEN_HEIGHT', game.screen.get_height())
@@ -173,6 +194,12 @@ def play_flappy_mango(game, flappy_state, exit_state):
                         game._music_watchdog = False
                 except Exception:
                     pass
+                # Fade out back to hub if possible
+                try:
+                    if hasattr(game, 'fade_out'):
+                        game.fade_out()
+                except Exception:
+                    pass
                 return
 
             elif event.type == pygame.KEYDOWN:
@@ -226,6 +253,12 @@ def play_flappy_mango(game, flappy_state, exit_state):
                             game.audio.stop_watchdog()
                         else:
                             game._music_watchdog = False
+                    except Exception:
+                        pass
+                    # Fade to black before returning to hub
+                    try:
+                        if hasattr(game, 'fade_out'):
+                            game.fade_out()
                     except Exception:
                         pass
                     return
@@ -481,7 +514,14 @@ def play_flappy_mango(game, flappy_state, exit_state):
             except Exception:
                 pass
 
-        pygame.display.flip()
+        # Present the logical surface to the actual display every frame
+        try:
+            game.present()
+        except Exception:
+            try:
+                pygame.display.flip()
+            except Exception:
+                pass
         try:
             game.clock.tick(FPS)
         except Exception:

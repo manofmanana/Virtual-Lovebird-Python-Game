@@ -1,6 +1,9 @@
 """Web entrypoint wrapper for pygbag.
 This file is a minimal launcher that imports the main game and runs it.
 It exists so pygbag can find a `main.py` at a top-level app folder.
+"""Web entrypoint wrapper for pygbag.
+This file is a minimal launcher that imports the main game and runs it.
+It exists so pygbag can find a `main.py` at a top-level app folder.
 """
 import os
 import sys
