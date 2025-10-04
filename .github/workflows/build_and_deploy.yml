@@ -1,4 +1,4 @@
-name: Build and deploy web
+name: Deploy web (zip-first)
 
 on:
   push:
@@ -6,42 +6,44 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run packaging script
-        run: |
-          bash scripts/pygbag_build_with_assets.sh
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: mango_web_build
-          path: web/build/web
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Prepare site dir (prefer mango_web_build.zip)
+        run: |
+          set -euo pipefail
+          rm -rf site
+          mkdir -p site
+          if [ -f mango_web_build.zip ]; then
+            echo "Found mango_web_build.zip — extracting to site/"
+            unzip -o mango_web_build.zip -d site
+          elif [ -d web/build/web ]; then
+            echo "Found web/build/web — copying to site/"
+            cp -a web/build/web/* site/
+          else
+            echo "No prebuilt site found — attempting to build (may be memory heavy)"
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt || true
+            pip install pygbag || true
+            bash scripts/pygbag_build_with_assets.sh
+            if [ -d web/build/web ]; then
+              cp -a web/build/web/* site/
+            else
+              echo "Build did not produce web/build/web — failing"
+              exit 1
+            fi
+          fi
+
+      - name: Show site contents
+        run: |
+          echo "site/ top-level:" && ls -la site | sed -n '1,200p'
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./web/build/web
+          publish_dir: ./site
           publish_branch: gh-pages
