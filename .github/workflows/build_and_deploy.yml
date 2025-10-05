@@ -12,30 +12,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare site dir (prefer mango_web_build.zip)
+      - name: Prepare site dir (zip-only)
         run: |
           set -euo pipefail
+          if [ ! -f mango_web_build.zip ]; then
+            echo "mango_web_build.zip not found in the repository root — failing"
+            exit 1
+          fi
           rm -rf site
           mkdir -p site
-          if [ -f mango_web_build.zip ]; then
-            echo "Found mango_web_build.zip — extracting to site/"
-            unzip -o mango_web_build.zip -d site
-          elif [ -d web/build/web ]; then
-            echo "Found web/build/web — copying to site/"
-            cp -a web/build/web/* site/
-          else
-            echo "No prebuilt site found — attempting to build (may be memory heavy)"
-            python -m pip install --upgrade pip
-            pip install -r requirements.txt || true
-            pip install pygbag || true
-            bash scripts/pygbag_build_with_assets.sh
-            if [ -d web/build/web ]; then
-              cp -a web/build/web/* site/
-            else
-              echo "Build did not produce web/build/web — failing"
-              exit 1
-            fi
-          fi
+          echo "Extracting mango_web_build.zip to site/"
+          unzip -o mango_web_build.zip -d site
 
       - name: Show site contents
         run: |
