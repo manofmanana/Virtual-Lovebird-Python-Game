@@ -21,6 +21,8 @@ jobs:
           fi
           rm -rf site
           mkdir -p site
+          echo "Listing mango_web_build.zip contents (diagnostic):"
+          unzip -l mango_web_build.zip || true
           echo "Extracting mango_web_build.zip to site/"
           unzip -o mango_web_build.zip -d site
 
